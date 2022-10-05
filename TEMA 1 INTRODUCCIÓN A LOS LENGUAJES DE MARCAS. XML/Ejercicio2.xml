@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE hechos_historicos>
 <hechos>
-    <hecho>
-        <fecha descripcion="IBM da a conocer el PC">
+    <hecho descripcion="IBM da a conocer el PC">
+        <fecha>
             <dia>12</dia>
             <mes>8</mes>
             <ano>1981</ano>
         </fecha>
     </hecho>
-    <hecho>
-        <fecha descripcion="Se funda Google">
+    <hecho descripcion="Se funda Google">
+        <fecha>
             <dia>4</dia>
             <mes>9</mes>
             <ano>1998</ano>
         </fecha>
     </hecho>
-    <hecho>
-        <fecha descripcion="Se funda Facebook">
+    <hecho descripcion="Se funda Facebook">
+        <fecha>
             <dia>4</dia>
             <mes>2</mes>
             <ano>2004</ano>
