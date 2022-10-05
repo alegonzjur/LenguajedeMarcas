@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/css" href="estilos.css"?>
+<!--Ejemplo de uso de comentarios.-->
+<!DOCTYPE biblioteca>
+<biblioteca>
+    <ejemplar>
+        <titulo>Canción de hielo y fuego 1, Juego de Tronos</titulo>
+        <autor>George R.R. Martin</autor>
+        <paginas>715</paginas>
+        <fecha>1998</fecha>
+    </ejemplar>
+    <ejemplar>
+        <titulo>El Silmarilion</titulo>
+        <autor>Tolkien</autor>
+        <paginas>425</paginas>
+        <fecha>1962</fecha>
+    </ejemplar>
+    <ejemplar>
+        <titulo>Joaquin, la finta y el sprint</titulo>
+        <autor>Joaquin Sanchez</autor>
+        <paginas>220</paginas>
+        <fecha>2016</fecha>
+    </ejemplar>
+    <ejemplar>
+        <titulo>La sangre de los elfos</titulo>
+        <autor>Andrzej Sapkowksi</autor>
+        <paginas>275 &amp; 280</paginas>
+        <fecha>2002</fecha>    
+    </ejemplar>
+</biblioteca>
