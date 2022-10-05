@@ -3,18 +3,15 @@
 <ciudades>
     <ciudad>
         <nombre>Nueva Delhi</nombre>
-        <pais>India</pais>
-        <continente nombre="Asia"></continente>
+        <pais continente="Asia">India</pais>
     </ciudad>
     <ciudad>
         <nombre>Lisboa</nombre>
-        <pais>Portugal</pais>
-        <continente nombre="Europa"></continente>
+        <pais continente="Europa">Portugal</pais>
     </ciudad>
     <ciudad>
         <nombre>El Cairo</nombre>
-        <pais>Egipto</pais>
-        <continente nombre="Africa"></continente>
+        <pais continente="Africa">Egipto</pais>
     </ciudad>
 
 </ciudades>
