@@ -1,8 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE arboles>
 <arboles>
-    <AcerMonspessulanum>
+    <AcerMonspessulanum> <!--Arbol 1-->
         <nombre_comun>Arce de Montpellier, Arce menor</nombre_comun>
         <vegetacion>Caducifolio</vegetacion>
+        <altura>6 a 10 metros</altura>
+        <forma_y_estructura>Copa esférica. 
+        Tronco principal recto con bifurcaciones.
+        Ramaje colgante.</forma_y_estructura>
+        <color_en_primavera>Haz verde brillante, enves verde blanquecino.</color_en_primavera>
+        <resistencia_a_las_heladas>Heladas fuertes (hasta 15ºC)</resistencia_a_las_heladas>
     </AcerMonspessulanum>
+    <OleaEuropea> <!--Arbol 2-->
+        <nombre_comun>Olivo</nombre_comun>
+        <vegetacion>Perenne</vegetacion>
+        <altura>8 a 15 metros</altura>
+        <forma_y_estructura>Copa irregular. 
+        Tronco principal irregular con bifurcaciones.</forma_y_estructura>
+    </OleaEuropea>
+    <RamajeTorturoso> <!--Arbol 3-->
+        <color_en_primavera>Haz verde oscuro, enves verde plateado.</color_en_primavera>
+        <resistencia_a_las_heladas>Heladas medias (hasta 10ºC)</resistencia_a_las_heladas>
+    </RamajeTorturoso>
+    <PlatanusOrientalis> <!--Arbol 4-->
+        <nombre_comun>Platano</nombre_comun>
+        <vegetacion>Caducifolio</vegetacion>
+        <altura>20 a 25 metros</altura>
+        <forma_y_estructura>Copa ovoidal. 
+        Tronco principal recto. 
+        Ramaje expandido.</forma_y_estructura>
+        <color_en_primavera>
+        Plateado en hojas jovenes. 
+        En hojas antiguas, haz verde oscuro, enves plateado.</color_en_primavera>
+        <color_en_otono>Ocre</color_en_otono>
+        <resistencia_a_las_heladas>Heladas fuertes (hasta 15ºC)</resistencia_a_las_heladas>
+    </PlatanusOrientalis>
 </arboles>
