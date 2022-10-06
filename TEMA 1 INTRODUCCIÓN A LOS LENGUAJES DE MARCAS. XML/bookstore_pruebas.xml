@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE bookstore>
+<bookstore>
+    <book category = "sci-fi">
+        <title language="english">Game of Thrones</title>
+        <author>George R.R. Martin</author>
+        <year>1996</year>
+        <price shop="Amazon">8,50€</price>     
+    </book>
+    <book category = "sci-fi">
+        <title language="english">Silmarilion</title>
+        <author>J.R.R.Tolkien</author>
+        <year>1977</year>
+        <price shop="La casa del libro">10,50€</price>
+    </book>
+</bookstore>
