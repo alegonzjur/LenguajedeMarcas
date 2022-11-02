@@ -9,7 +9,7 @@
                             <xs:element name="nombre" type="xs:string"/>
                             <xs:element name="edad" type="xs:positiveInteger"/>
                         </xs:sequence>
-                        <xs:attribute name="numero" type="xs:posiveInteger"/>
+                        <xs:attribute name="numero" type="xs:positiveInteger"/>
                     </xs:complexType>
                 </xs:element>
             </xs:sequence>
