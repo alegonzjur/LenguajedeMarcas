@@ -8,7 +8,7 @@
                     <xs:complexType>
                         <xs:sequence>
                             <xs:element name="street" type="xs:string"/>
-                            <xs:element name="number" type="xs:integer">
+                            <xs:element name="number">
                                 <xs:simpleType>
                                     <xs:restriction base="xs:integer">
                                         <xs:minInclusive value="0"/>
