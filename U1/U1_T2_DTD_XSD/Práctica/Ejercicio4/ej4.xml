@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<shiporder xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+orderid="123456789" xsi:noNamespaceSchemaLocation="ej4.xsd">
+    <orderperson>Vinilo</orderperson>
+    <shipto>
+        <name>Alejandro</name>
+        <address>Calle Zapardiel</address>
+        <city>Sevilla</city>
+        <country>Espana</country>
+    </shipto>
+    <item>
+        <title>Thriller</title>
+        <note>Album</note>
+        <quantity>1</quantity>
+        <price>12</price>
+    </item>
+</shiporder>

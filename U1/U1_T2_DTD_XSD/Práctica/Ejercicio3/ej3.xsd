@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?><xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="relacion">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="persona" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="nombre"/>
+                            <xs:element name="email" maxOccurs="unbounded">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:maxLength value="250"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="parentesco">
+                                <xs:complexType>
+                                        <xs:attribute name="tipo">
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:string">
+                                                    <xs:pattern value="(Hijo,Hija,Padre,Madre,Otro)"/>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:attribute>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="sexo" type="xs:string"/>
+                        <xs:attribute name="carnet">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:pattern value="[A-Z][0-9]{4}"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:attribute>        
+                    </xs:complexType>
+                </xs:element> 
+            </xs:sequence>
+            <xs:attribute name="dni">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:pattern value="[0-9]{8}[A-Z]"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:attribute>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
