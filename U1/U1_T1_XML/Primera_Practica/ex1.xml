@@ -1,0 +1,426 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE tenis>
+<tenis>
+    <partido>
+        <torneo tipo_pista="Césped">Wimbledon</torneo>
+        <ano>2008</ano>
+        <tenista1>
+            <nombre>Rafael Nadal</nombre>
+            <edad>22 anos</edad>
+            <mano_dominante>Zurdo</mano_dominante>
+            <tipo_reves>Dos manos</tipo_reves>
+            <nacionalidad continente="Europa">España</nacionalidad>
+            <lugar_nacimiento>Manacor</lugar_nacimiento>
+        </tenista1>
+        <tenista2>
+            <nombre>Roger Federer</nombre>
+            <edad>27 anos</edad>
+            <mano_dominante>Diestro</mano_dominante>
+            <tipo_reves>Una mano</tipo_reves>
+            <nacionalidad continente="Europa">Suiza</nacionalidad>
+            <lugar_nacimiento>Basilea</lugar_nacimiento>
+        </tenista2>
+        <fase_torneo>Final</fase_torneo>
+        <longitud>4 horas y 48 minutos</longitud>
+        <sets>
+            <set1>
+                <resultado>6-4</resultado>
+                <duracion>52 min</duracion>
+            </set1>
+            <set2>
+                <resultado>5-7</resultado>
+                <duracion>58 min</duracion>
+            </set2>
+            <set3>
+                <resultado>4-6</resultado>
+                <duracion>50 min</duracion>
+            </set3>
+            <set4>
+                <resultado>7-5</resultado>
+                <duracion>52 min</duracion>
+            </set4>
+            <set5>
+                <resultado>7-5</resultado>
+                <duracion>59 min</duracion>
+            </set5>
+        </sets>
+        <ganador>Rafael Nadal</ganador>
+    </partido>
+    <partido>
+        <torneo tipo_pista="Asfalto">Australia Open</torneo>
+        <ano>2022</ano>
+        <tenista1>
+            <nombre>Rafael Nadal</nombre>
+            <edad>36 anos</edad>
+            <mano_dominante>Zurdo</mano_dominante>
+            <tipo_reves>Dos manos</tipo_reves>
+            <nacionalidad continente="Europa">España</nacionalidad>
+            <lugar_nacimiento>Manacor</lugar_nacimiento>
+        </tenista1>
+        <tenista2>
+            <nombre>Daniil Medvedev</nombre>
+            <edad>26 anos</edad>
+            <mano_dominante>Diestro</mano_dominante>
+            <tipo_reves>Dos manos</tipo_reves>
+            <nacionalidad continente="Europa">Rusia</nacionalidad>
+            <lugar_nacimiento>Moscu</lugar_nacimiento>
+        </tenista2>
+        <fase_torneo>Final</fase_torneo>
+        <longitud>4 horas y 16 minutos</longitud>
+        <sets>
+            <set1>
+                <resultado>2-6</resultado>
+                <duracion>37 min</duracion>
+            </set1>
+            <set2>
+                <resultado>4-6</resultado>
+                <duracion>43 min</duracion>
+            </set2>
+            <set3>
+                <resultado>6-4</resultado>
+                <duracion>47 min</duracion>
+            </set3>
+            <set4>
+                <resultado>7-5</resultado>
+                <duracion>51 min</duracion>
+            </set4>
+            <set5>
+                <resultado>6-3</resultado>
+                <duracion>39 min</duracion>
+            </set5>
+        </sets>
+        <ganador>Rafael Nadal</ganador>
+    </partido>
+    <partido>
+        <torneo tipo_pista="Tierra batida">Roland Garros</torneo>
+        <ano>2022</ano>
+        <tenista1>
+            <nombre>Rafael Nadal</nombre>
+            <edad>36 anos</edad>
+            <mano_dominante>Zurdo</mano_dominante>
+            <tipo_reves>Dos manos</tipo_reves>
+            <nacionalidad continente="Europa">España</nacionalidad>
+            <lugar_nacimiento>Manacor</lugar_nacimiento>
+        </tenista1>
+        <tenista2>
+            <nombre>Casper Ruud</nombre>
+            <edad>23 anos</edad>
+            <mano_dominante>Diestro</mano_dominante>
+            <tipo_reves>Dos manos</tipo_reves>
+            <nacionalidad continente="Europa">Noruega</nacionalidad>
+            <lugar_nacimiento>Oslo</lugar_nacimiento>
+        </tenista2>
+        <fase_torneo>Final</fase_torneo>
+        <longitud>2 horas y 30 minutos</longitud>
+        <sets>
+            <set1>
+                <resultado>6-3</resultado>
+                <duracion>34 min</duracion>
+            </set1>
+            <set2>
+                <resultado>6-2</resultado>
+                <duracion>29 min</duracion>
+            </set2>
+            <set3>
+                <resultado>6-3</resultado>
+                <duracion>32 min</duracion>
+            </set3>
+        </sets>
+        <ganador>Rafael Nadal</ganador>
+    </partido>
+    <partido>
+        <torneo tipo_pista="Asfalto">Us Open</torneo>
+        <ano>2022</ano>
+        <tenista1>
+            <nombre>Carlos Alcaraz</nombre>
+            <edad>19 anos</edad>
+            <mano_dominante>Diestro</mano_dominante>
+            <tipo_reves>Dos manos</tipo_reves>
+            <nacionalidad continente="Europa">España</nacionalidad>
+            <lugar_nacimiento>Murcia</lugar_nacimiento>
+        </tenista1>
+        <tenista2>
+            <nombre>Casper Ruud</nombre>
+            <edad>23 anos</edad>
+            <mano_dominante>Diestro</mano_dominante>
+            <tipo_reves>Dos mano</tipo_reves>
+            <nacionalidad continente="Europa">Noruega</nacionalidad>
+            <lugar_nacimiento>Oslo</lugar_nacimiento>
+        </tenista2>
+        <fase_torneo>Final</fase_torneo>
+        <longitud>3 horas y 31 minutos</longitud>
+        <sets>
+            <set1>
+                <resultado>6-4</resultado>
+                <duracion>43 min</duracion>
+            </set1>
+            <set2>
+                <resultado>2-6</resultado>
+                <duracion>34 min</duracion>
+            </set2>
+            <set3>
+                <resultado>7-6</resultado>
+                <duracion>52 min</duracion>
+            </set3>
+            <set4>
+                <resultado>6-3</resultado>
+                <duracion>39 min</duracion>
+            </set4>
+        </sets>
+        <ganador>Carlos Alcaraz</ganador>
+    </partido>
+    <partido>
+        <torneo tipo_pista="Césped">Wimbledon</torneo>
+        <ano>2022</ano>
+        <tenista1>
+            <nombre>Novak Djokovic</nombre>
+            <edad>36 anos</edad>
+            <mano_dominante>Diestro</mano_dominante>
+            <tipo_reves>Dos manos</tipo_reves>
+            <nacionalidad continente="Europa">Serbia</nacionalidad>
+            <lugar_nacimiento>Belgrado</lugar_nacimiento>
+        </tenista1>
+        <tenista2>
+            <nombre>Nick Kyrgios</nombre>
+            <edad>27 anos</edad>
+            <mano_dominante>Diestro</mano_dominante>
+            <tipo_reves>Una mano</tipo_reves>
+            <nacionalidad continente="Oceania">Australia</nacionalidad>
+            <lugar_nacimiento>Camberra</lugar_nacimiento>
+        </tenista2>
+        <fase_torneo>Final</fase_torneo>
+        <longitud>3 horas y 20 minutos</longitud>
+        <sets>
+            <set1>
+                <resultado>6-3</resultado>
+                <duracion>38 min</duracion>
+            </set1>
+            <set2>
+                <resultado>6-4</resultado>
+                <duracion>43 min</duracion>
+            </set2>
+            <set3>
+                <resultado>3-6</resultado>
+                <duracion>36 min</duracion>
+            </set3>
+            <set4>
+                <resultado>6-2</resultado>
+                <duracion>34 min</duracion>
+            </set4>
+        </sets>
+        <ganador>Novak Djokovic</ganador>
+    </partido>
+    <partido>
+        <torneo tipo_pista="Césped">Wimbledon</torneo>
+        <ano>2006</ano>
+        <tenista1>
+            <nombre>Rafael Nadal</nombre>
+            <edad>20 anos</edad>
+            <mano_dominante>Zurdo</mano_dominante>
+            <tipo_reves>Dos manos</tipo_reves>
+            <nacionalidad continente="Europa">España</nacionalidad>
+            <lugar_nacimiento>Manacor</lugar_nacimiento>
+        </tenista1>
+        <tenista2>
+            <nombre>Roger Federer</nombre>
+            <edad>25 anos</edad>
+            <mano_dominante>Diestro</mano_dominante>
+            <tipo_reves>Una mano</tipo_reves>
+            <nacionalidad continente="Europa">Suiza</nacionalidad>
+            <lugar_nacimiento>Basilea</lugar_nacimiento>
+        </tenista2>
+        <fase_torneo>Final</fase_torneo>
+        <longitud>4 horas y 9 minutos</longitud>
+        <sets>
+            <set1>
+                <resultado>6-4</resultado>
+                <duracion>52 min</duracion>
+            </set1>
+            <set2>
+                <resultado>6-7</resultado>
+                <duracion>57 min</duracion>
+            </set2>
+            <set3>
+                <resultado>2-6</resultado>
+                <duracion>39 min</duracion>
+            </set3>
+            <set4>
+                <resultado>4-6</resultado>
+                <duracion>41 min</duracion>
+            </set4>
+        </sets>
+        <ganador>Roger Federer</ganador>
+    </partido>
+    <partido>
+        <torneo tipo_pista="Asfalto">Australia Open</torneo>
+        <ano>2017</ano>
+        <tenista1>
+            <nombre>Novak Djokovic</nombre>
+            <edad>31 anos</edad>
+            <mano_dominante>Diestro</mano_dominante>
+            <tipo_reves>Dos manos</tipo_reves>
+            <nacionalidad continente="Europa">Serbia</nacionalidad>
+            <lugar_nacimiento>Belgrado</lugar_nacimiento>
+        </tenista1>
+        <tenista2>
+            <nombre>Roger Federer</nombre>
+            <edad>36 anos</edad>
+            <mano_dominante>Diestro</mano_dominante>
+            <tipo_reves>Una mano</tipo_reves>
+            <nacionalidad continente="Europa">Suiza</nacionalidad>
+            <lugar_nacimiento>Basilea</lugar_nacimiento>
+        </tenista2>
+        <fase_torneo>Final</fase_torneo>
+        <longitud>4 horas y 10 minutos</longitud>
+        <sets>
+            <set1>
+                <resultado>6-4</resultado>
+                <duracion>52 min</duracion>
+            </set1>
+            <set2>
+                <resultado>6-7</resultado>
+                <duracion>58 min</duracion>
+            </set2>
+            <set3>
+                <resultado>4-6</resultado>
+                <duracion>41 min</duracion>
+            </set3>
+            <set4>
+                <resultado>6-3</resultado>
+                <duracion>40 min</duracion>
+            </set4>
+            <set5>
+                <resultado>6-4</resultado>
+                <duracion>44 min</duracion>
+            </set5>
+        </sets>
+        <ganador>Roger Federer</ganador>
+    </partido>
+    <partido>
+        <torneo tipo_pista="Tierra batida">Roland Garros</torneo>
+        <ano>2019</ano>
+        <tenista1>
+            <nombre>Rafael Nadal</nombre>
+            <edad>33 anos</edad>
+            <mano_dominante>Zurdo</mano_dominante>
+            <tipo_reves>Dos manos</tipo_reves>
+            <nacionalidad continente="Europa">España</nacionalidad>
+            <lugar_nacimiento>Manacor</lugar_nacimiento>
+        </tenista1>
+        <tenista2>
+            <nombre>Novak Djokovic</nombre>
+            <edad>33 anos</edad>
+            <mano_dominante>Diestro</mano_dominante>
+            <tipo_reves>Dos manos</tipo_reves>
+            <nacionalidad continente="Europa">Serbia</nacionalidad>
+            <lugar_nacimiento>Belgrado</lugar_nacimiento>
+        </tenista2>
+        <fase_torneo>Final</fase_torneo>
+        <longitud>3 horas y 41 minutos</longitud>
+        <sets>
+            <set1>
+                <resultado>6-4</resultado>
+                <duracion>52 min</duracion>
+            </set1>
+            <set2>
+                <resultado>5-7</resultado>
+                <duracion>58 min</duracion>
+            </set2>
+            <set3>
+                <resultado>4-6</resultado>
+                <duracion>50 min</duracion>
+            </set3>
+            <set4>
+                <resultado>7-5</resultado>
+                <duracion>52 min</duracion>
+            </set4>
+        </sets>
+        <ganador>Rafael Nadal</ganador>
+    </partido>
+    <partido>
+        <torneo tipo_pista="Césped">Juegos Olimpicos</torneo>
+        <ano>2008</ano>
+        <tenista1>
+            <nombre>Rafael Nadal</nombre>
+            <edad>22 anos</edad>
+            <mano_dominante>Zurdo</mano_dominante>
+            <tipo_reves>Dos manos</tipo_reves>
+            <nacionalidad continente="Europa">España</nacionalidad>
+            <lugar_nacimiento>Manacor</lugar_nacimiento>
+        </tenista1>
+        <tenista2>
+            <nombre>Roger Federer</nombre>
+            <edad>27 anos</edad>
+            <mano_dominante>Diestro</mano_dominante>
+            <tipo_reves>Una mano</tipo_reves>
+            <nacionalidad continente="Europa">Suiza</nacionalidad>
+            <lugar_nacimiento>Basilea</lugar_nacimiento>
+        </tenista2>
+        <fase_torneo>Final</fase_torneo>
+        <longitud>3 horas y 58 minutos</longitud>
+        <sets>
+            <set1>
+                <resultado>6-4</resultado>
+                <duracion>52 min</duracion>
+            </set1>
+            <set2>
+                <resultado>5-7</resultado>
+                <duracion>58 min</duracion>
+            </set2>
+            <set3>
+                <resultado>4-6</resultado>
+                <duracion>50 min</duracion>
+            </set3>
+            <set4>
+                <resultado>7-5</resultado>
+                <duracion>52 min</duracion>
+            </set4>
+        </sets>
+        <ganador>Rafael Nadal</ganador>
+    </partido>
+    <partido>
+        <torneo tipo_pista="Tierra batida">Roland Garros</torneo>
+        <ano>2012</ano>
+        <tenista1>
+            <nombre>Novak Djokovic</nombre>
+            <edad>26 anos</edad>
+            <mano_dominante>Diestro</mano_dominante>
+            <tipo_reves>Dos manos</tipo_reves>
+            <nacionalidad continente="Europa">Serbia</nacionalidad>
+            <lugar_nacimiento>Belgrado</lugar_nacimiento>
+        </tenista1>
+        <tenista2>
+            <nombre>Roger Federer</nombre>
+            <edad>27 anos</edad>
+            <mano_dominante>Diestro</mano_dominante>
+            <tipo_reves>Una mano</tipo_reves>
+            <nacionalidad continente="Europa">Suiza</nacionalidad>
+            <lugar_nacimiento>Basilea</lugar_nacimiento>
+        </tenista2>
+        <fase_torneo>Semifinal</fase_torneo>
+        <longitud>4 horas y 12 minutos</longitud>
+        <sets>
+            <set1>
+                <resultado>6-4</resultado>
+                <duracion>52 min</duracion>
+            </set1>
+            <set2>
+                <resultado>5-7</resultado>
+                <duracion>58 min</duracion>
+            </set2>
+            <set3>
+                <resultado>4-6</resultado>
+                <duracion>50 min</duracion>
+            </set3>
+            <set4>
+                <resultado>7-5</resultado>
+                <duracion>52 min</duracion>
+            </set4>
+            <set5>
+                <resultado>7-5</resultado>
+                <duracion>59 min</duracion>
+            </set5>
+        </sets>
+        <ganador>Rafael Nadal</ganador>
+    </partido>
+</tenis>
