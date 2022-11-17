@@ -5,12 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Listas</title>
+    <style>
+        ol.a {
+            list-style-type: upper-latin;
+        }
+        ol.b{
+            list-style-type: lower-alpha;
+        }
+    </style>
 </head>
 <body>
-    <ol>  <!--Li*n(N Listas)--> <!--Ol*N>li*X(N y L son números) Misma estructura--> 
+    <ol class="a">  <!--Li*n(N Listas)--> <!--Ol*N>li*X(N y L son números) Misma estructura--> 
         <li>Primera lista</li>
         <li>Segunda lista</li>  
-        <ol>
+        <ol class="b">
             <li>Primero</li>
             <li>Segundo</li>
         </ol>

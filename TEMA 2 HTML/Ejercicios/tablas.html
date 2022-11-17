@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tablas</title>
+    <style>
+        td,table {
+            border: 1px solid white;
+            border-collapse: collapse;
+
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <!--Tr*5-->
+        <tr> <!--Th(Encabezado)-->
+            <th>Nombre</th>
+            <th>Apellidos</th>
+            <th>Direccion</th>
+            <th>Telefono</th>
+            <th>Email</th>
+        </tr>
+        <tr> <!--Td(Datos)-->
+            <td>Pablo</td>
+            <td>Perez</td>
+            <td>Aqui</td>
+            <td>11111111</td>
+            <td>yosoy@pepe.es</td>
+        </tr>
+        <tr>
+            <td>Manuel</td>
+            <td>Lopez</td>
+            <td>Alli</td>
+            <td>22222222</td>
+            <td>yosoy@manuel.es</td>
+        </tr>
+        <tr>
+            <td>Maria</td>
+            <td>Fernandez</td>
+            <td>Mas alla </td>
+            <td>33333333</td>
+            <td>yosoy@maria.es</td>
+        </tr>
+        <tr>
+            <td>Sara</td>
+            <td>Gallardo</td>
+            <td>Mas aqui</td>
+            <td>44444444</td>
+            <td>yosoy@sara.es</td>
+        </tr>
+    </table>
+    <!--table>(tr>th*5)+(tr*4>td*5) Misma tabla que antes pero con abreviacion-->
+    <table>
+        <tr>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+    <table style="background-color:black;">
+        <caption>Alumnos matriculados</caption>
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Apellidos</th>
+                <th>Direccion</th>
+                <th style="background-color: grey">Telefono</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Pepe</td>
+                <td>Perez</td>
+                <td>Aqui</td>
+                <td style="background-color: grey">11111111</td>
+                <td>yosoy@pepe.es</td>
+            </tr>
+            <tr>
+                <td>Manuel</td>
+                <td>Lopez</td>
+                <td>Alli</td>
+                <td style="background-color: grey">22222222</td>
+                <td>yosoy@manuel.es</td>
+            </tr>
+            <tr>
+                <td>Maria</td>
+                <td>Fernandez</td>
+                <td>Mas alli</td>
+                <td style="background-color: grey">33333333</td>
+                <td>yosoy@maria.es</td>
+            </tr>
+            <tr>
+                <td>Sara</td>
+                <td>Gallardo</td>
+                <td>Mas aqui</td>
+                <td>44444444</td>
+                <td>yosoy@sara.es</td>
+            </tr>
+            <tr>
+                <td>Pie de tabla</td>
+            </tr>
+        </tbody>
+        
+    </table>
+    <table>
+        <caption>Horario 1ºGS ASIR</caption>
+        <thead>
+            <tr>
+                <th>Hora</th>
+                <th>Lunes</th>
+                <th>Martes</th>
+                <th>Miercoles</th>
+                <th>Jueves</th>
+                <th>Viernes</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>08:15</td>
+                <td rowspan="2">ISO</td> <!--rowspan=columnas que ocupa-->
+                <td colspan="2">FOL</td> <!--colspan=filas que ocupa-->
+                <td rowspan="2">LM</td>
+                <td rowspan="2">ISO</td>
+            </tr>
+            <tr>
+                <td>09:15</td>
+                <td>FH</td>
+                <td rowspan="2">PAR</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>10:15</td>
+                <td>GBD</td>
+                <td>PAR</td>
+                <td>ISO</td>
+                <td>PAR</td>
+            </tr>
+            <tr>
+                <td>11:15</td>
+                <td colspan="5" align="center">Recreo</td>
+            </tr>
+            <tr>
+                <td>11:45</td>
+                <td>GBD</td>
+                <td>PAR</td>
+                <td>FH</td>
+                <td>ISO</td>
+                <td>PAR</td>
+            </tr>
+            <tr>
+                <td>12:45</td>
+                <td>FH</td>
+                <td rowspan="2">ISO</td>
+                <td rowspan="2">LM</td>
+                <td rowspan="2">GBD</td>
+                <td rowspan="2">GBD</td>
+            </tr>
+            <tr>
+                <td>13:45</td>
+                <td>FOL</td>
+            </tr>
+            <tr>
+                <td>14:45</td>
+                <td colspan="5" align="center">Fin de clase</td>
+            </tr>
+        </tbody>
+    </table>
+
+    
+</body>
+</html>
