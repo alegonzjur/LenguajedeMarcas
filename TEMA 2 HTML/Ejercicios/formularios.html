@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios</title>
+</head>
+<body>
+    <form>
+        <label for="nombre" style="font-weight:bold;">Nombre</label> <!--Etiquetas-->
+        <input type="text" name="Entrada" id="nombre" value="España" placeholder="Introduzca su búsqueda" required> <!--Importante que el id sea igual que el for del label-->
+        <input type="submit"> <!--Botón de buscar-->
+        <br>
+        <label for="s_opciones">Selecciona tu fruta favorita.</label>
+        <br>
+        <select name="Opciones" id="s_opciones" size="3" multiple> <!--Selector de opciones-->
+            <option value="Níspero" selected>Níspero</option>
+            <option value="Albarillo">Albarillo</option>
+            <option value="Manzana">Manzana</option>
+        </select>
+        <br>
+        <label for="t_consulta">Escriba aquí su cosnulta</label>
+        <br>
+        <textarea name="Consulta" id="t_consulta" cols="30" rows="10" placeholder="Escriba su consulta"></textarea> <!--Para introducir textos-->
+        <br>
+        <!--Lista de inputs-->
+        <input type="button" value="Aceptar">
+        <input type="reset" value="Borrar">
+        <input type="submit" value="Enviar">
+        <input type="checkbox"> <!--Poner un check en un cuadro-->
+        <br>
+        <input type="color"> <!--Selecciona un tipo de color-->
+        <input type="date"> <!--Escoge una fecha-->
+        <input type="datetime-local"> <!--Fecha y hora-->
+        <input type="email"> <!--Email-->
+        <br>
+        <input type="file"> <!--Archivo-->
+        <input type="hidden"> <!--Escondido-->
+        <input type="image"> <!--Enviar imagen-->
+        <input type="month"> <!--Mes-->
+        <br>
+        <input type="number"> <!--Numero-->
+        <input type="password"> <!--Contraseña, sale cifrada-->
+        <input type="radio"> <!--Checkbox en redondo-->
+        <input type="range"> <!--Barra con rango-->
+        <br>
+        <input type="reset"> <!--Borra todo lo que haya escrito en la página-->
+        <input type="search"> <!--Búsqueda-->
+        <input type="tel"> <!--Tel-->
+        <input type="text">
+        <br>
+        <input type="time"><!--Hora-->
+        <input type="url"> <!--Url-->
+        <input type="week"> <!--Semana-->
+        
+        
+        
+        <fieldset>
+            <legend>Formulario de consulta</legend>
+            <textarea name="Redacción" id="t_textarea" cols="30" rows="10" placeholder="Escriba su solicitud"></textarea>
+        </fieldset>
+    </form>
+    
+</body>
+</html>
