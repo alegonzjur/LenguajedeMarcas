@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 4</title>
+    <style>
+        legend{
+            display: table-cell;
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <legend>Datos Personales</legend>
+        <fieldset style="background-color: grey;">
+            <table>
+                <tr>
+                    <td>Nombre:</td>
+                    <td>Apellidos:</td>
+                    <td>DNI:</td>
+                </tr>
+                <tr>
+                    <th><input type="text" name= "nombre" id="i_nombre" required></th>
+                    <th><input type="text" name="apellidos" id="i_apellidos" required></th>
+                    <th><input type="text" name="dni" id="i_dni" required></th>
+                </tr>
+                <tr>
+                    <td>Localidad Nacimiento:</td>
+                    <td>Provincia:</td>
+                    <td>Fecha Nacimiento:</td>
+                </tr>
+                <tr>
+                    <th><input type="text" name="localidad" id="i_localidad" required></th>
+                    <td>
+                        <select name="provincia" id="sel_provincia">
+                            
+                            <option value="- seleccione -" selected>- seleccione -</option>
+                            <option value="Sevilla">Sevilla</option>
+                            <option value="Cordoba">Cordoba</option>
+                            <option value="Granada">Granada</option>
+                            <option value="Malaga">Malaga</option>
+                            <option value="Cadiz">Cadiz</option>
+                            <option value="Huelva">Huelva</option>
+                            <option value="Jaen">Jaen</option>
+                            <option value="Almeria">Almeria</option>
+                            
+                        </select>
+                    </td>
+                    <td><input type="date" name="fecha" id="i_fecha" required placeholder="dd/mm/aaaa"></td>
+                </tr>
+                <tr>
+                    <td>Direccion</td>
+                    <td></td>
+                    <td>Código Postal</td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <input type="text" name="dirección" id="id_direccion">
+                    </td>
+                    
+                    <th>
+                        <input type="text" name="código postal" id="id_cpostal">
+                    </th>
+                </tr>
+            </table>
+        </fieldset>
+        <legend>Forma de Acceso</legend>
+        <fieldset style="background-color: rgb(212, 174, 138) ;">
+            <ul>
+                <input type="radio">
+                <label for="radio">Direct</label>
+                <ul>
+                    <input type="radio">
+                    <label for="bach_logse">Bachillerato LOGSE, Modalidad</label>
+                    <input type="text" name="modalidad" id="id_modalidad">
+                    <br>
+                    <input type="radio">
+                    <label for="bach_expl" name="exp" id="id_exp">Bachillerato Experimental</label>
+                    <br>
+                    <input type="radio">
+                    <label for="COU" name="cou" id="id_cou">COU, Opción</label>
+                    <input type="text" id="id_cou_opc">
+                    <br>
+                    <input type="radio">
+                    <label for="FP2" name="fp2" id="id_fp2">FP2</label>
+                    <br>
+                    <input type="radio">
+                    <label for="otros" name="otros" id="id_otros">Otros(Especifique):</label>
+                    <input type="text" name="otros_text" id="id_otros_text">
+                </ul>
+                <input type="radio">
+                <label for="radio2">Prueba Libre</label>
+            </ul>
+            
+        </fieldset>
+        <legend>Documentos Adjuntados</legend>
+        <fieldset style="background-color: rgb(214, 103, 103);">
+            <input type="checkbox">
+            <label for="dni" name="foto_dni" id="id_fotodni">Fotocopia DNI</label>
+            <input type="checkbox">
+            <label for="cert_acad" id="id_cert_acad">Certificado Academico</label>
+            <br>
+            <input type="checkbox">
+            <label for="otros" id="id_otros_adj">Otros documentos(especifique):</label>
+            <input type="text">
+        </fieldset>
+        <br>
+        <input type="submit" value="Enviar Solicitud">
+
+    </form>
+</body>
+</html>
