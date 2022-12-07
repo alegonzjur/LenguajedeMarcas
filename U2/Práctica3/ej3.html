@@ -21,15 +21,15 @@
             </tr>
             <tr>
                 <th><label for="usuario">Usuario:</label></td>
-                <th><input type="text" name="usuario" id="id_us"></th>
+                <th><input type="text" name="usuario" id="usuario"></th>
             </tr>
             <tr>
                 <th><label for="password">Password:</label></th>
-                <th><input type="text" name="password" id="id_pw"></th>
+                <th><input type="text" name="password" id="password"></th>
             </tr>
             <tr>
                 <th><label for="fecha_nacimiento">Fecha de Nacimiento:</label></th>
-                <th><input type="text" name="fecha_nacimiento" id="id_f_nac" value="dd/mm/aaaa"></th>
+                <th><input type="text" name="fecha_nacimiento" id="fecha_nacimiento" value="dd/mm/aaaa"></th>
             </tr>
             <tr>
                 <th><label for="curso">Curso de Matriculación:</label></th>
@@ -46,16 +46,16 @@
                 <th><label for="Role">Role:</label></th>
                 <th>
                     <ul style="text-align: justify;">
-                        <input type="radio" checked>
+                        <input type="radio" id="Estudiante" checked>
                         <label for="Estudiante">Estudiante</label>
                         <br>
-                        <input type="radio">
+                        <input type="radio" id="Profesor">
                         <label for="Profesor">Profesor</label>
                         <br>
-                        <input type="radio">
+                        <input type="radio" id="Apoyo">
                         <label for="Apoyo">Apoyo</label>
                         <br>
-                        <input type="radio">
+                        <input type="radio" id="staff">
                         <label for="staff">Staff</label>
                     </ul>
                 </th>
@@ -64,13 +64,13 @@
                 <th><label for="forma_com">Forma de Comunicación:</label></th>
                 <th>
                     <ul style="text-align: justify;">
-                        <input type="checkbox">
+                        <input type="checkbox" id="mail">
                         <label for="mail">Mail</label>
                         <br>
-                        <input type="checkbox">
+                        <input type="checkbox" id="tlfno">
                         <label for="tlfno">Teléfono</label>
                         <br>
-                        <input type="checkbox" checked>
+                        <input type="checkbox" checked id="correo_ord">
                         <label for="correo_ord">Correo ordinario</label>
                     </ul>
                 </th>
