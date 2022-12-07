@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 4</title>
+    <style>
+        td{
+            border: 1px solid white;
+            background-color: white;
+            color: black;
+        }
+        th{
+            text-align: center;
+            background-color: white;
+            color: black;
+        }
+        label{
+            font-size: large;
+        }
+
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <thead>
+                <th colspan="4">
+                    <b>TRES EN RAYA</b>
+                </th>
+            </thead>
+        </tr>
+        <tr>
+            <td></td>
+            <td>A</td>
+            <td>B</td>
+            <td>C</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>
+                <img src="../Práctica3/imagenes/cruz.PNG" alt="cruz">
+            </td>
+            <td></td>
+            <td>
+                <img src="../Práctica3/imagenes/tick.PNG" alt="tick">
+            </td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td></td>
+            <td>
+                <img src="../Práctica3/imagenes/cruz.PNG" alt="cruz">
+            </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>
+                <img src="../Práctica3/imagenes/tick.PNG" alt="tick">
+            </td>
+            <td></td>
+            <td>
+                <img src="../Práctica3/imagenes/cruz.PNG" alt="cruz">
+            </td>
+        </tr>
+    </table>
+    <br>
+    <form>
+        <label for="turno">Turno para jugador Uno</label>
+        <br>
+        <label for="fila">Fila</label>
+        <select name="filas" id="id_f">
+            <option value="1" selected>1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+        </select>
+        <br>
+        <label for="columna">Columna</label>
+        <select name="columnas" id="id_c">
+            <option value="1">1</option>
+            <option value="2" selected>2</option>
+            <option value="3">3</option>
+        </select>
+        <br>
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+</html>

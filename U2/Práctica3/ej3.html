@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3</title>
+    <style>
+
+        legend{
+            background-color: rgb(57, 156, 151);
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <table>
+            <tr>
+                <td colspan="2" style="text-align: center; background-color:rgb(57, 156, 151);">IES Alixar Login</td>
+            </tr>
+            <tr>
+                <th><label for="usuario">Usuario:</label></td>
+                <th><input type="text" name="usuario" id="id_us"></th>
+            </tr>
+            <tr>
+                <th><label for="password">Password:</label></th>
+                <th><input type="text" name="password" id="id_pw"></th>
+            </tr>
+            <tr>
+                <th><label for="fecha_nacimiento">Fecha de Nacimiento:</label></th>
+                <th><input type="text" name="fecha_nacimiento" id="id_f_nac" value="dd/mm/aaaa"></th>
+            </tr>
+            <tr>
+                <th><label for="curso">Curso de Matriculación:</label></th>
+                <th>
+                    <select>
+                        <option value="Primero DAW1" selected>Primero DAW1</option>
+                        <option value="Segundo DAW1">Segundo DAW1</option>
+                        <option value="Primero ASIR">Primero ASIR</option>
+                        <option value="Segundo ASIR">Segundo Asir</option>
+                    </select>
+                </th>
+            </tr>
+            <tr>
+                <th><label for="Role">Role:</label></th>
+                <th>
+                    <ul style="text-align: justify;">
+                        <input type="radio" checked>
+                        <label for="Estudiante">Estudiante</label>
+                        <br>
+                        <input type="radio">
+                        <label for="Profesor">Profesor</label>
+                        <br>
+                        <input type="radio">
+                        <label for="Apoyo">Apoyo</label>
+                        <br>
+                        <input type="radio">
+                        <label for="staff">Staff</label>
+                    </ul>
+                </th>
+            </tr>
+            <tr>
+                <th><label for="forma_com">Forma de Comunicación:</label></th>
+                <th>
+                    <ul style="text-align: justify;">
+                        <input type="checkbox">
+                        <label for="mail">Mail</label>
+                        <br>
+                        <input type="checkbox">
+                        <label for="tlfno">Teléfono</label>
+                        <br>
+                        <input type="checkbox" checked>
+                        <label for="correo_ord">Correo ordinario</label>
+                    </ul>
+                </th>
+            </tr>
+            <tr>
+                <th style="text-align: right;"><input type="submit" value="Enviar"></th>
+                <th style="text-align: left;"><input type="reset" value="Borrar"></th>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
