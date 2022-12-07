@@ -71,16 +71,30 @@
         </tr>
     </table>
     <br>
-    <form>
-        <label for="turno">Turno para jugador Uno</label>
-        <br>
-        <label for="fila">Fila</label>
-        <input type="number" value="1" >
-        <br>
-        <label for="columna">Columna</label>
-        <input type="number" value="2">
-        <br>
-        <input type="submit" value="Enviar">
-    </form>
+    <table>
+        <form>
+            <thead>
+                <th colspan="2"><label for="turno">Turno para jugador Uno</label></th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><label for="fila">Fila</label></td>
+                    <td><input type="number" value="1" ></td>
+                </tr>
+                <tr>
+                    <td><label for="columna">Columna</label></td>
+                    <td><input type="number" value="2"></td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="text-align: center;"><input type="submit" value="Enviar"></td>
+                </tr>
+            </tbody>
+            
+
+            
+            <br>
+            
+        </form>
+    </table>
 </body>
 </html>
