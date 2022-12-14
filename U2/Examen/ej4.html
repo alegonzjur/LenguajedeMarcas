@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 4 - Alejandro R. González Jurado</title>
+    <style>
+        legend{
+            color: blue;
+        }
+
+    </style>
+</head>
+<body>
+    <fieldset>
+        <form>
+            <h1>Reservation Request</h1>
+            <fieldset>
+                <legend>General Information</legend>
+                <table>
+                    <tr>
+                        <th><label for="Arrival_Date">Arrival Date:</label></th>
+                        <th><input type="text" id="Arrival_Date" value="12/1/2016"></th>
+                        <th><label for="AnswerInvalid" style="color: red;">Arrival date is invalid.</label></th>
+                    </tr>
+                    <tr>
+                        <th><label for="Nights">Nights:</label></th>
+                        <th><input type="text" id="Nights" value="three"></th>
+                        <th><label for="NightInvalid" style="color:red">Nights must be a number.</label></th>
+                    </tr>
+                    <tr>
+                        <th><label for="Adults">Adults:</label></th>
+                        <th><select name="Adults" id="Adults">
+                                <option value="0">0</option>
+                                <option value="1" selected>1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                            </select>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th><label for="Children">Children:</label></th>
+                        <th><select name="Child" id="Children">
+                                <option value="0" selected>0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                            </select>
+                        </th>
+                    </tr>
+                </table>
+            </fieldset>
+            <fieldset>
+                <legend>Preferences</legend>
+                <table>
+                    <tr>
+                        <th><label for="room_type">Room Type:</label></th>
+                        <th><input type="radio" checked>Standard</th>
+                        <th><input type="radio">Bussiness</th>
+                        <th><input type="radio">Suite</th>
+                    </tr>
+                    <tr>
+                        <th><label for="bed_type">Bed type:</label></th>
+                        <th><input type="radio">King</th>
+                        <th><input type="radio">Double Double</th>
+                    </tr>
+                    <tr>
+                        <th><input type="checkbox">Smoking</th>
+                    </tr>
+                /table>
+            </fieldset>
+            <fieldset>
+                <legend>Contact Information</legend>
+                <table>
+                    <tr>
+                        <th><label for="name">Name:</label></th>
+                        <th><input type="text" id="name"></th>
+                        <th><label for="name_required" style="color: red;">Name is required.</label></th>
+                    </tr>
+                    <tr>
+                        <th><label for="email">Email:</label></th>
+                        <th><input type="text" id="email" value="graceyahoo.com"></th>
+                        <th><label for="email_invalid" style="color: red;">Email address is invalid.</label></th>
+                    </tr>
+                    <tr>
+                        <th><label for="phone">Phone:</label></th>
+                        <th><input type="text" id="phone" value="123-456-789"></th>
+                        <th><label for="phone_invalid" style="color: red;">Phone number is invalid.</label></th>
+                    </tr>
+                </table>
+            </fieldset>
+            <br>
+            <table>
+                <tr>
+                    <th><input type="submit" id="submit" value="Submit Reservation"></th>
+                    <th><input type="reset" value="Clear"></th>
+                </tr>
+            </table>
+        </form>
+    </fieldset>
+</body>
+</html>
