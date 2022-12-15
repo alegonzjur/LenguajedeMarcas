@@ -1,10 +1,18 @@
+*{
+    font-family: 'Courier New', Courier, monospace;
+    border: 1px solid yellowgreen;
+}
+
 p{
     color: blue;
     font-size: large;
     border: 1px solid black;
     padding: 1px;
     margin: 0px;
-    
+}
+
+#h1{                    
+    color: greenyellow;
 }
 
 h2{
@@ -15,4 +23,28 @@ img{
     border: 1px solid black;
     width: 426px;
     height: 266px;
+    
 }
+
+table{
+    border: 1px solid black;
+}
+
+thead td{
+    font-family: 'Times New Roman', Times, serif;
+    color: aqua;
+}
+
+body>ul>li{
+
+    color: blueviolet;
+}
+
+img~img{
+    margin: 50px;
+
+}
+br+img{
+    border: 3px dashed blue;
+}
+
