@@ -12,15 +12,17 @@ tbody th:first-child{
     background-color: green;
 }
 
-tbody tr :nth-child(3) td{
+tbody:nth-child(3) th:nth-child(2)
+{
     background-color: yellow;
 }
 
 th:last-child:hover, td:last-child:hover{
     font-size: 2em;
 }
-thead:hover{
-    font-size: 2em;
+
+thead:first-letter{
+    font-size: large;
 }
 
 caption{
