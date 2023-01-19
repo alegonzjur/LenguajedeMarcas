@@ -1,0 +1,114 @@
+CREATE TABLE Cliente(
+	NumCliente NUMBER,
+	Saldo NUMBER,
+	LimCredito NUMBER,
+	Descuento NUMBER
+);
+
+ALTER TABLE Cliente
+	ADD CONSTRAINT{PK_Cliente PRIMARY KEY (NumCliente)}
+
+;
+CREATE SEQUENCE NumCliente(
+	INCREMENT BY 1,
+	START WITH 0,
+	NOMAXVALUE
+);
+
+CREATE TABLE posee(
+	NumCliente NUMBER,
+	CodDireccion NUMBER
+);
+
+ALTER TABLE posee
+	ADD CONSTRAINT{PK_posee PRIMARY KEY (NumCliente,CodDireccion),
+		FK1_posee FOREIGN KEY (NumPedido) REFERENCES Pedido(NumPedido),
+		FK2_posee FOREIGN KEY (NumArticulo) REFERENCES Articulo(NumArticulo)}
+;
+
+CREATE TABLE Direccion(
+	CodDireccion NUMBER,
+	Via VARCHAR2,
+	NombreVia VARCHAR2,
+	Numero NUMBER,
+	Piso NUMBER,
+	Portal NUMBER,
+	CodPostal NUMBER
+);
+
+ALTER TABLE Direccion
+	ADD CONSTRAINT{PK_Dir PRIMARY KEY (Direccion)}
+;
+
+CREATE TABLE Pedido(
+	NumPedido NUMBER,
+	Fecha DATE,
+	NumCliente NUMBER,
+	CodDireccion NUMBER
+);
+
+ALTER TABLE Pedido
+	ADD CONSTRAINT{PK_Ped PRIMARY KEY(NumPedido),
+	FK1_Ped FOREIGN KEY (NumCliente) REFERENCES Cliente(NumCliente),
+	FK2_Ped FOREIGN KEY (CodDireccion) REFERENCES Direccion(CodDireccion)}
+;
+CREATE SEQUENCE NumPedido(
+	INCREMENT BY 1,
+	START WITH 0,
+	NOMAXVALUE
+);
+
+CREATE TABLE incluye(
+	NumPedido NUMBER,
+	NumArticulo NUMBER,
+	Cantidad NUMBER
+);
+
+ALTER TABLE incluye
+	ADD CONSTRAINT{PK_incl PRIMARY KEY (NumPedido,NumArticulo),
+	FK1_incl FOREIGN KEY (NumPedido) REFERENCES Pedido(NumPedido),
+	FK2_incl FOREIGN KEY (NumArticulo) REFERENCES Articulo(NumArticulo)}
+;
+
+CREATE TABLE Articulo(
+	NumArticulo NUMBER,
+	Descripcion VARCHAR2
+);
+
+ALTER TABLE Articulo
+	ADD CONSTRAINT{PK_Art PRIMARY KEY (NumArticulo)}
+);
+
+CREATE SEQUENCE NumArticulo(
+	INCREMENT BY 1,
+	START WITH 0,
+	NOMAXVALUE
+);
+
+CREATE TABLE distribuye(
+	NumArticulo NUMBER,
+	NumFabrica NUMBER,
+	CantSuministro NUMBER,
+	Existencias NUMBER
+);
+
+ALTER TABLE distribuye
+	ADD CONSTRAINT{PK_dist PRIMARY KEY (NumArticulo,NumFabrica),
+	FK1_dist FOREIGN KEY (NumArticulo) REFERENCES Articulo(NumArticulo),
+	FK2_dist FOREIGN KEY (NumFabrica) REFERENCES Fabrica(NumFabrica)}
+;
+
+CREATE TABLE Fabrica(
+	NumFabrica NUMBER,
+	Telefono NUMBER
+);
+
+ALTER TABLE Fabrica
+	ADD CONSTRAINT{PK_Fabrica PRIMARY KEY (NumFabrica)}
+;
+
+CREATE SEQUENCE NumFabrica(
+	INCREMENT BY 1,
+	START WITH 0,
+	NOMAXVALUE
+);

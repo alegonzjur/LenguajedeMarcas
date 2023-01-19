@@ -1,0 +1,46 @@
+CREATE TABLE Vivienda(
+	ID INTEGER,
+	TipoVia VARCHAR2(20),
+	NombreVia VARCHAR2(20),
+	Numero INTEGER,
+	IDMunicipio INTEGER,
+	CONSTRAINT {PK_viv PRIMARY KEY (ID),
+	FOREIGN KEY (IDMunicipio) REFERENCES Municipio(ID),
+	NN_viv NOT NULL (NombreVia, Numero)}
+);
+
+CREATE TABLE Municipio(
+	ID NUMBER,
+	Nombre VARCHAR2(30),
+	CodPostal NUMBER,
+	Provincia VARCHAR2(30),
+	CONSTRAINT { PK_mun PRIMARY KEY (ID),
+	NN_mun NOT NULL (Nombre)}
+);
+
+CREATE TABLE cabezaFamilia(
+	DNI CHAR(9),
+	IDVivienda NUMBER,
+	CONSTRAINT {PRIMARY KEY (DNI)},
+	CONSTRAINT {UNIQUE (IDVivienda)},
+	CONSTRAINT {FOREIGN KEY (DNI) REFERENCES Persona(DNI),
+	FOREIGN KEY (IDVivienda) REFERENCES Vivienda(ID)}
+);
+
+CREATE TABLE posee (
+	DNI CHAR(9),
+	IDVivienda NUMBER,
+	CONSTRAINT {PRIMARY KEY(DNI,IDVivienda)},
+	CONSTRAINT {FOREIGN KEY(DNI) REFERENCES Persona(DNI),
+		    FOREIGN KEY(IDVivienda) REFERENCES Vivienda(ID)}
+);
+
+CREATE TABLE Persona(
+	DNI CHAR(9),
+	Nombre VARCHAR2,
+	FechaNac DATE,
+	Sexo BOOLEAN (H,M),
+	IDVivienda NUMBER,
+	CONSTRAINT {PRIMARY KEY (DNI),
+		    FOREIGN KEY (IDVivienda) REFERENCES Vivienda(ID)}
+);

@@ -1,0 +1,55 @@
+
+CREATE TABLE Cliente(
+	CodCliente CHAR,
+	DNI CHAR,
+	Nombre VARCHAR,
+	Direccion VARCHAR,
+	Telefono CHAR,
+	CONSTRAINT NOT NULL (Nombre),
+	CONSTRAINT PRIMARY KEY (CodCliente),
+	
+);
+
+CREATE TABLE Coche(
+	Matricula CHAR(7),
+	Marca VARCHAR2(20),
+	Modelo VARCHAR2(40),
+	Color VARCHAR2(20),
+	PrecioHora NUMBER,
+	CONSTRAINT PRIMARY KEY (Matricula),
+	CONSTRAINT NOT NULL (Marca),
+	CONSTRAINT NOT NULL (Modelo)
+);
+
+CREATE TABLE Reserva(
+	Numero NUMBER,
+	FechaInicio DATE,
+	FechaFin DATE,
+	PrecioTotal NUMBER,
+	CodCliente NUMBER,
+	CONSTRAINT PRIMARY KEY (Numero),
+	CONSTRAINT FOREIGN KEY (CodCliente) REFERENCE Cliente(CodCliente),
+	CREATE SEQUENCE (Numero)
+);
+
+CREATE TABLE avala(
+	Avalado VARCHAR2(40),
+	Avalador VARCHAR2(40),
+	CONSTRAINT PRIMARY KEY (Avalado),
+	CONSTRAINT FOREIGN KEY (Avalado) REFERENCE Cliente(CodCliente),
+	CONSTRAINT FOREIGN KEY (Avalador) REFERENCE Cliente(CodCliente)
+);
+
+CREATE TABLE incluye(
+	Numero NUMBER,
+	Matricula CHAR(7),
+	litrosGas NUMBER,
+	CONSTRAINT PRIMARY KEY (Numero,Matricula),
+	CONSTRAINT FOREIGN KEY (Numero) REFERENCE Reserva(Numero),
+	CONSTRAINT FOREIGN KEY (Matricula) REFERENCE Coche(Matricula)
+);
+
+CREATE SEQUENCE numeroReserva(
+	INCREMENT BY 1
+	START WITH 0
+);

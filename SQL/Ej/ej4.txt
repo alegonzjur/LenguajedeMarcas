@@ -1,0 +1,15 @@
+Pág 136 -> 4
+Monta:
+Modelo = CHAR - Podría ser VARCHAR
+NIF = CHAR
+FechaMontaje = DATE
+
+CREATE TABLE monta(
+Modelo CHAR,
+NIF_N CHAR,
+FechaMontaje DATE, 
+CONSTRAINT PRIMARY KEY (Modelo,NIF_N,FechaMontaje),
+CONSTRAINT FOREIGN KEY (Modelo) REFERENCE ModeloDormitorio(Cod),
+COSNTRAINT FOREIGN KEY (NIF_N) REFERENCE Montador(NIF),
+
+);
