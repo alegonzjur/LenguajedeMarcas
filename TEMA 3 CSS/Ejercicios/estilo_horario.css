@@ -1,0 +1,28 @@
+table{
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+td, th{
+    border: 1px solid black;
+    text-align: center;
+}
+
+tbody th:first-child{
+    background-color: green;
+}
+
+tbody tr :nth-child(3) td{
+    background-color: yellow;
+}
+
+th:last-child:hover, td:last-child:hover{
+    font-size: 2em;
+}
+thead:hover{
+    font-size: 2em;
+}
+
+caption{
+    color: greenyellow;
+}

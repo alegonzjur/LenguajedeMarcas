@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horario</title>
+    <link rel="stylesheet" href="./estilo_horario.css" type="text/css">
+</head>
+<body>
+    <table>
+        <caption>HORARIO DE CLASE CURSO 2018-2019</caption>
+        <thead>
+            <tr>
+                <th>Horas</th>
+                <th>Lunes</th>
+                <th>Martes</th>
+                <th>Miercoles</th>
+                <th>Jueves</th>
+                <th>Viernes</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>8:00</td>
+                <td rowspan="2">Matematicas</td>
+                <td>Lengua</td>
+                <td>Ingles</td>
+                <td colspan="2">Ciencias</td>
+            </tr>
+            <tr>
+                <th>9:00</th>
+                <td>Historia</td>
+                <td>Ciencias</td>
+                <td>Matematicas</td>
+                <td>Lengua</td>
+            </tr>
+            <tr>
+                <th>10:00</th>
+                <th colspan="5">RECREO</th>
+            </tr>
+            <tr>
+                <th>10:30</th>
+                <td>Ingles</td>
+                <td rowspan="2">Ciencias</td>
+                <td>Matematicas</td>
+                <td>Lengua</td>
+                <td>Historia</td>
+            </tr>
+            <tr>
+                <th>11:30</th>
+                <td>Historia</td>
+                <td>Ciencias</td>
+                <td>Matematicas</td>
+                <td>Ingles</td>
+            </tr>
+        </tbody>
+    </table>
+    <form>
+        <label for="Email">Email</label>
+        <input type="text" required placeholder="Inserte email del destinatario">
+        <br>
+        <input type="submit" value="Enviar Horario">
+    </form>
+</body>
+</html>
