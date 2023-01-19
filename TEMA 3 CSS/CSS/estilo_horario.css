@@ -28,3 +28,7 @@ thead:first-letter{
 caption{
     color: greenyellow;
 }
+
+input:required{
+    border: 5px red;
+}
