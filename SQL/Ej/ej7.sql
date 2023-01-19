@@ -63,6 +63,6 @@ CREATE alquila(
     CONSTRAINT {FK1_alquila FOREIGN KEY (DNI) REFERENCES Socio(DNI)},
     CONSTRAINT {FK2_alquilaPeli FOREIGN KEY (ID_Peli) REFERENCES Ejemplar(ID_Peli)},
     CONSTRAINT {FK2_alquilaNumero FOREIGN KEY (Numero) REFERENCES Ejemplar(Numero)},
-    CONSTRAINT {CHECK FechaDevolucion > FechaAlquiler}
+    CONSTRAINT {CHECK FechaDev_FechaAlq FechaDevolucion > FechaAlquiler}
     
 );
