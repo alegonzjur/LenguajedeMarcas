@@ -1,13 +1,17 @@
 body{
     /*Arriba y abajo - Derecha e izquierda */
     margin: 40px 40px;
-    border: 1px solid black;
-    border-collapse: collapse;
+    vertical-align: middle;
     
 }
 
-div{
-    padding: 25px 50px 75px 100px;
-    width: 100px;
-    height: 20px;
+header{
+    width: 700px;
+    height: 100px;
+    font-size: 15px;
+    
+}
+h1{
+    color: rgb(18, 148, 255);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
