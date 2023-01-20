@@ -39,8 +39,9 @@ CREATE TABLE Persona(
 	DNI CHAR(9),
 	Nombre VARCHAR2,
 	FechaNac DATE,
-	Sexo BOOLEAN (H,M),
-	IDVivienda NUMBER,
+	Sexo CHAR (1),
+	IDVivienda INTEGER,
 	CONSTRAINT {PRIMARY KEY (DNI),
-		    FOREIGN KEY (IDVivienda) REFERENCES Vivienda(ID)}
+		    FOREIGN KEY (IDVivienda) REFERENCES Vivienda(ID),
+		    check_sexo CHECK(Sexo IN('H','M'))}
 );
