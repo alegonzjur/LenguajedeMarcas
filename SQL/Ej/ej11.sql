@@ -76,4 +76,27 @@ ALTER TABLE Producto ADD(
                 FK2_Prod FOREIGN KEY (CodProveedor) REFERENCES Proveedor(CodProveedor)}
 );
 
+CREATE Proveedor(
+    CodProveedor INT,
+    Nombre VARCHAR2(40),
+    Direccion VARCHAR2(40),
+    Telefono INT,
+    Web VARCHAR2(200),
+    
+);
+CREATE INDEX NomProv ON Proveedor(Nombre);
 
+ALTER TABLE Proveedor ADD(
+    CONSTRAINT{PK_prov PRIMARY KEY (CodProveedor)}
+);
+
+CREATE TABLE Categoria(
+    IdCategoria INT,
+    Nombre VARCHAR2(20),
+    Descripcion VARCHAR2(40),
+    
+);
+CREATE INDEX IndNom ON Categoria(Nombre);
+ALTER TABLE Categoria ADD(
+    CONSTRAINT{PK_Cat PRIMARY KEY (IdCategoria)}
+);
