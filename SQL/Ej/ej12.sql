@@ -48,3 +48,27 @@ CREATE TABLE Edicion(
     Horario VARCHAR2(20),
     Profesor VARCHAR2(20)
 );
+
+CREATE TABLE prerrequisito(
+    CursoSolicitado VARCHAR2(20),
+    CursoPrevio VARCHAR2(20),
+    Obligatorio CHAR(1)
+);
+
+ALTER TABLE prerrequisito ADD(
+    CONSTRAINT{PK_pre PRIMARY KEY (CursoSolicitado, CursoPrevio), 
+                FOREIGN KEY FK1_pre (CursoSolicitado) REFERENCES Curso(CodCurso),
+                FOREIGN KEY FK2_pre (CursoPrevio) REFERENCES Curso(CodCurso),
+                CHECK(Obligatorio IN('S','N'))}
+);
+
+CREATE TABLE Curso(
+    CodCurso INT,
+    Nombre VARCHAR2(20),
+    Duracion TIME,
+    Coste NUMBER
+);
+
+ALTER TABLE Curso ADD(
+    CONSTRAINT{PK_Cur PRIMARY KEY (CodCurso)}
+);
