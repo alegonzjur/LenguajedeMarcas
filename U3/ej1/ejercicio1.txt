@@ -1,0 +1,17 @@
+Empezando por lo más general, todo el "body" tendrá un color de fondo de un color claro o beige.
+
+Continuamos con un párrafo en el que la letra está puesta a un tamaño de 12píxeles y un márgen asignado de 15 píxeles.
+Según está puesto en el archivo css, si escribieramos otro texto plano; sin ningún id ni modificación, tendría las mismas características.
+En cambio, más adelante nos encontramos un párrafo que tiene asignada la clase "verse" y cuyas características
+han sido modificadas con un margen izquierdo de 60 píxeles y un color de letra marrón.
+Si abrimos el archivo html en el navegador podemso comprobar fácilmente cuales tienen la clase asignada y cuales no.
+
+Encontramos adelante un link (a) cuyas características han sido modificadas para que el color del link inicialmente
+sea verde, si dejamos el cursor encima se pondrá de color negro, si hacemos click y ejecutamos el link se quedará en azul,
+y por último si volvemos al html inicial, veremos la el link en amarillo.
+
+Atrás habremos dejado un header h1 que tendrá un color marrón y un tamaño de letra de 20 pt.
+
+Y por último, hay varias líneas divisorias que están modificadas para que sean de color azul.
+
+Hay varios elementos más pero no se encuentran modificados en el css.

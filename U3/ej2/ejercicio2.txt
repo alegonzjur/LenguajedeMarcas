@@ -1,0 +1,3 @@
+Son diferentes debido a que los 2 primeros párrafos tienen asignada la clase .verse, que se encuentran editados en el css
+con el color marrón y un margen izquierdo de 60 píxeles, al contrario que el resto de párrafos que tienen asignados un tamaño de letra de 12pt
+y un margen izquierdo de 15 píxeles.
