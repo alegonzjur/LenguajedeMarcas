@@ -1,0 +1,125 @@
+CREATE TABLE Visitante(
+    DNI CHAR(9),
+    Nombre VARCHAR2(40),
+    Domicilio VARCHAR2(40),
+    Profesion VARCHAR2(40)
+);
+CREATE TABLE ComunidadAutonoma(
+    CodCA INT,
+    Nombre VARCHAR2(40),
+    OrgResponsable VARCHAR2(40)
+);
+
+CREATE TABLE Especie(
+    CodEspecie INT,
+    NombreCientifico VARCHAR2(40),
+    NombreVulgar VARCHAR2(40)
+);
+CREATE TABLE Animal(
+    CodEspecie INT,
+    Alimentacion VARCHAR2(40),
+    PeriodoCelo VARCHAR2(40)
+);
+CREATE TABLE Vegetal(
+    CodEspecie INT,
+    Floracion VARCHAR2(40),
+    PeriodoFloracion VARCHAR2(40)
+);
+CREATE TABLE Mineral(
+    CodEspecie INT,
+    Tipo VARCHAR2(40)
+);
+CREATE TABLE ParqueNatural(
+    CodPN INT,
+    Nombre VARCHAR2(40),
+    FechaDeclaracion DATE
+);
+CREATE TABLE Area(
+    NombreA VARCHAR2(40),
+    Extension VARCHAR2(40),
+    CodPN INT
+);
+CREATE TABLE Vehiculo(
+    Matricula CHAR(7),
+    Tipo VARCHAR2(40),
+    DNI CHAR(9)
+);
+CREATE TABLE Proyecto(
+    CodProy INT,
+    Presupuesto NUMBER,
+    FechaInicio DATE,
+    FechaFin DATE,
+    CodEspecie INT
+);
+CREATE TABLE Excursion(
+    CodExcursion INT,
+    Fecha DATE,
+    Hora TIME,
+    aPie VARCHAR2(40),
+    CodAlojamiento INT
+);
+CREATE TABLE Alojamiento(
+    CodAlojamiento INT,
+    Categoria VARCHAR2(40)
+    Capacidad NUMBER,
+    CodPN INT    
+);
+CREATE TABLE Entrada(
+    CodEntrada INT,
+    CodPN INT
+);
+
+CREATE TABLE Personal(
+    DNI CHAR(9),
+    NSS VARCHAR2(40),
+    Nombre VARCHAR2(40),
+    Direccion VARCHAR2(40),
+    TlfnoDomicilio INT,
+    TlfnoMovil INT,
+    Sueldo NUMBER,
+    CodPN INT
+);
+
+CREATE TABLE Conservador(
+    DNI CHAR(9),
+    Tarea VARCHAR2(40),
+    NombreA VARCHAR2(40)
+);
+
+CREATE TABLE Vigilante(
+    DNI CHAR(9),
+    NombreA VARCHAR2(40)
+);
+CREATE TABLE Investigador(
+    DNI CHAR(9),
+    Titulacion VARCHAR2(40)
+);
+CREATE TABLE Gestor(
+    DNI CHAR(9),
+    CodEntrada INT
+);
+CREATE TABLE CA-PN(
+    CodCA INT,
+    CodPN INT,
+    Superficie NUMBER
+);
+CREATE TABLE E-V(
+    CodExcursion INT,
+    DNI CHAR(9)
+);
+CREATE TABLE A-V(
+    CodAlojamiento INT,
+    DNI CHAR(9),
+    FechaInicio DATE,
+    FechaFin DATE
+);
+CREATE TABLE E-A(
+    CodEspecie INT,
+    CodArea INT,
+    CantIndividuos INT
+);
+
+CREATE TABLE I-P(
+    CodProy INT,
+    DNI CHAR(9)
+);
