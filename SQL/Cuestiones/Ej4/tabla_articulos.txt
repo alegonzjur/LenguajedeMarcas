@@ -1,0 +1,16 @@
+CREATE TABLE Articulos(
+    Articulo VARCHAR2(20),
+    Cod_Fabricante NUMBER(3),
+    Peso NUMBER(3),
+    Categoria VARCHAR2(10),
+    Precio_Venta NUMBER(6),
+    Precio_Costo NUMBER(6),
+    Existencias NUMBER(5)
+);
+
+ALTER TABLE Articulos ADD(
+    CONSTRAINT PK_art PRIMARY KEY (Articulo,Cod_Fabricante,Peso,Categoria),
+    CONSTRAINT FK_art FOREIGN KEY (Cod_Fabricante) REFERENCES Fabricantes(Cod_Fabricante),
+    CONSTRAINT CH_art CHECK (Precio_Venta>0 AND Precio_Costo>0 AND Peso>0),
+    CONSTRAINT CH1_art CHECK (IN Categoria ('Primera','Segunda','Tercera'))
+);

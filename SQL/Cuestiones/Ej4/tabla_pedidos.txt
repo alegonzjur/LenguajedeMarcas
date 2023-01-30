@@ -1,0 +1,17 @@
+CREATE TABLE Pedidos(
+    NIF VARCHAR2(10),
+    Articulo VARCHAR2(20),
+    Cod_Fabricante NUMBER(3),
+    Peso NUMBER(3),
+    Categoria VARCHAR2(10),
+    Fecha_Pedido DATE,
+    Unidades_Pedidas NUMBER(4),
+    Existencias NUMBER(5)
+);
+ALTER TABLE Pedidos ADD(
+    CONSTRAINT PK_ped PRIMARY KEY (NIF,Articulo,Cod_Fabricante,Peso,Categoria,Fecha_Pedido),
+    CONSTRAINT FK_ped FOREIGN KEY (NIF) REFERENCES Tiendas(NIF),
+    CONSTRAINT FK1_ped FOREIGN KEY (Articulo,Cod_Fabricante,Peso,Categoria) REFERENCES Articulos(Articulo,Cod_Fabricante,Peso,Categoria),
+    CONSTRAINT CH_ped CHECK (Unidades_Pedidas>0),
+    CONSTRAINT CH1_ped CHECK (IN = Categoria('Primera','Segunda','Tercera'))
+);

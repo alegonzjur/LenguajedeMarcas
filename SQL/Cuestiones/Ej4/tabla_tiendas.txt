@@ -1,0 +1,15 @@
+CREATE TABLE Tiendas(
+    NIF VARCHAR2(10) PRIMARY KEY,
+    Nombre VARCHAR2(20),
+    Direccion VARCHAR2(20),
+    Poblacion VARCHAR2(20),
+    Provincia VARCHAR2(20),
+    CodPostal NUMBER(5)
+);
+
+ALTER TABLE Tiendas ADD(
+    CONSTRAINT CHECK (Provincia = UPPER(Provincia))
+);
+ALTER TABLE Tiendas MODIFY(
+    Nombre VARCHAR2(30) NOT NULL
+);

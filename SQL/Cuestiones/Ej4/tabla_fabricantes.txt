@@ -1,0 +1,12 @@
+CREATE TABLE Fabricantes(
+    Cod_Fabricante NUMBER(3) PRIMARY KEY,
+    Nombre VARCHAR2(15),
+    Pais VARCHAR2(15)
+);
+
+ALTER TABLE Fabricantes ADD(
+    CONSTRAINT CHECK (Nombre = UPPER(Nombre))  
+);
+ALTER TABLE Fabricantes ADD(
+    CONSTRAINT CHECK (Pais = UPPER(Pais))
+);

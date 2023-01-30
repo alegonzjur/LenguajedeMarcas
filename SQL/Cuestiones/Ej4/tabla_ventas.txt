@@ -1,0 +1,17 @@
+CREATE TABLE Ventas(
+    NIF VARCHAR2(10),
+    Articulo VARCHAR2(20),
+    Cod_Fabricante NUMBER(3),
+    Peso NUMBER(3),
+    Categoria VARCHAR2(10),
+    Fecha_Venta DATE,
+    Unidades_Vendidas NUMBER(4)
+);
+
+ALTER TABLE Ventas ADD(
+    CONSTRAINT PK_ven PRIMARY KEY (NIF,Articulo,Cod_Fabricante,Peso,Categoria,Fecha_Venta),
+    CONSTRAINT FK_ven FOREIGN KEY (NIF) REFERENCES Tiendas(NIF),
+    CONSTRAINT FK1_ven FOREIGN KEY(Articulo,Cod_Fabricante,Peso,Categoria) REFERENCES Articulos(Articulo,Cod_Fabricante,Peso,Categoria),
+    CONSTRAINT CH_ven CHECK(Unidades_Vendidas>0),
+    CONSTRAINT CH1_ven CHECK (IN Categoria('Primera','Segunda','Tercera'))
+);
