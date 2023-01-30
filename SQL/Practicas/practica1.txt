@@ -1,0 +1,4 @@
+CREATE TABLE Equipo(
+    Codigo INT,
+    Nombre VARCHAR2()
+);
