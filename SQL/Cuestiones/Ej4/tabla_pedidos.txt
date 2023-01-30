@@ -13,5 +13,5 @@ ALTER TABLE Pedidos ADD(
     CONSTRAINT FK_ped FOREIGN KEY (NIF) REFERENCES Tiendas(NIF),
     CONSTRAINT FK1_ped FOREIGN KEY (Articulo,Cod_Fabricante,Peso,Categoria) REFERENCES Articulos(Articulo,Cod_Fabricante,Peso,Categoria),
     CONSTRAINT CH_ped CHECK (Unidades_Pedidas>0),
-    CONSTRAINT CH1_ped CHECK (IN = Categoria('Primera','Segunda','Tercera'))
+    CONSTRAINT CH1_ped CHECK (Categoria IN('Primera','Segunda','Tercera'))
 );

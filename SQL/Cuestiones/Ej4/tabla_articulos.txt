@@ -12,5 +12,5 @@ ALTER TABLE Articulos ADD(
     CONSTRAINT PK_art PRIMARY KEY (Articulo,Cod_Fabricante,Peso,Categoria),
     CONSTRAINT FK_art FOREIGN KEY (Cod_Fabricante) REFERENCES Fabricantes(Cod_Fabricante),
     CONSTRAINT CH_art CHECK (Precio_Venta>0 AND Precio_Costo>0 AND Peso>0),
-    CONSTRAINT CH1_art CHECK (IN Categoria ('Primera','Segunda','Tercera'))
+    CONSTRAINT CH1_art CHECK (Categoria IN('Primera','Segunda','Tercera'))
 );
