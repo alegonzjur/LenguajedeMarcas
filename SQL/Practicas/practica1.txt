@@ -1,4 +1,47 @@
 CREATE TABLE Equipo(
-    Codigo INT,
-    Nombre VARCHAR2()
+    Codigo INTEGER PRIMARY KEY,
+    Nombre VARCHAR2(40),
+    Estadio VARCHAR2(40),
+    Aforo INTEGER,
+    Ciudad VARCHAR2(40),
+    DNI_Pres CHAR(9)
+);
+
+CREATE TABLE Presidente(
+    DNI CHAR(9) PRIMARY KEY,
+    Nombre VARCHAR2(40),
+    Apellidos VARCHAR2(80),
+    FechaElec DATE,
+    FechaNac DATE
+);
+
+CREATE TABLE Partido(
+    Codigo INTEGER PRIMARY KEY,
+    Fecha DATE,
+    EquipoLoc INTEGER,
+    EquipoVis INTEGER
+);
+CREATE TABLE Jugador(
+    Codigo INTEGER PRIMARY KEY,
+    Nombre VARCHAR2(40),
+    Posicion VARCHAR2(40),
+    FechaNac DATE
+);
+CREATE TABLE marca_gol(
+    CodPar INTEGER,
+    CodJug INTEGER,
+    Minuto INTEGER,
+    Descripcion VARCHAR2(40)
+);
+ALTER TABLE marca_gol ADD(
+    CONSTRAINT PK_mg PRIMARY KEY (CodPar,CodJug),
+    CONSTRAINT FK_mg1 FOREIGN KEY (CodPar) REFERENCES Partido(Codigo),
+    CONSTRAINT FK_mg2 FOREIGN KEY (CodJug) REFERENCES Jugador(Codigo)
+);
+ALTER TABLE Partido ADD(
+    CONSTRAINT FK_Par1 FOREIGN KEY (EquipoLoc) REFERENCES Equipo(Codigo),
+    CONSTRAINT FK_Par2 FOREIGN KEY (EquipoVis) REFERENCES Equipo(Codigo) 
+);
+ALTER TABLE Equipo ADD(
+    CONSTRAINT FK_Equ FOREIGN KEY (DNI_Pres) REFERENCES Presidente(DNI)
 );
