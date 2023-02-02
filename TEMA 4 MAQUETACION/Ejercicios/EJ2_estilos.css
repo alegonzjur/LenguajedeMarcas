@@ -1,0 +1,83 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: lightgrey;
+}
+.container{
+    width: 80%;
+    height: 600px;
+    background-color: rgb(183, 235, 107);
+    margin: 20px auto;
+}
+
+header div{
+    display: inline-block;
+    color: white;
+    padding: 20px;
+    width: 20%;
+
+}
+header{
+    background-color: rgb(34, 30, 30);
+    position: sticky;
+    top: 0px;
+    z-index: 100;
+}
+aside{
+    position: fixed;
+    border: 2px solid black;
+    width: 8%;
+    top: 20%;
+    text-align: center;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    height: 380px;
+   
+}
+aside img{
+    width: 90%;
+}
+figure{
+    border: 2px solid black;
+    width: 20%;
+    text-align: center;
+    background-color: white;
+    border-radius: 5px;
+    position: absolute;
+}
+figure img{
+    width: 90%;
+    margin-top: 5px;
+    
+
+}
+aside ul{
+    list-style: none;
+    padding: 0px;
+    font-size: 80%;
+}
+#f1{
+    top: 100px;
+    left: 300px;
+    transform: rotate(45deg);
+    z-index: 4;
+}
+#f2{
+    top: 150px;
+    left: 350px;
+    transform: rotate(90deg);
+    z-index: 3;
+}
+#f3{
+    top: 200px;
+    left: 400px;
+    transform: rotate(35deg);
+    z-index: 2;
+}
+#f4{
+    top: 250px;
+    left: 450px;
+    transform: rotate(70deg);
+    z-index: 1;
+}
