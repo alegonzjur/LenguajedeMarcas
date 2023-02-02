@@ -2,7 +2,7 @@ CREATE TABLE Equipo(
     Codigo INTEGER PRIMARY KEY,
     Nombre VARCHAR2(40),
     Estadio VARCHAR2(40),
-    Aforo INTEGER,
+    Aforo INTEGER DEFAULT(0),
     Ciudad VARCHAR2(40),
     DNI_Pres CHAR(9)
 );
@@ -17,15 +17,17 @@ CREATE TABLE Presidente(
 
 CREATE TABLE Partido(
     Codigo INTEGER PRIMARY KEY,
-    Fecha DATE,
+    Fecha DATE NOT NULL,
     EquipoLoc INTEGER,
-    EquipoVis INTEGER
+    EquipoVis INTEGER,
+    Duracion INTEGER
 );
 CREATE TABLE Jugador(
     Codigo INTEGER PRIMARY KEY,
     Nombre VARCHAR2(40),
     Posicion VARCHAR2(40),
-    FechaNac DATE
+    FechaNac DATE,
+    FechaAlta DATE DEFAULT SYSDATE
 );
 CREATE TABLE marca_gol(
     CodPar INTEGER,
@@ -36,23 +38,21 @@ CREATE TABLE marca_gol(
 ALTER TABLE marca_gol ADD(
     CONSTRAINT PK_mg PRIMARY KEY (CodPar,CodJug),
     CONSTRAINT FK_mg1 FOREIGN KEY (CodPar) REFERENCES Partido(Codigo),
-    CONSTRAINT FK_mg2 FOREIGN KEY (CodJug) REFERENCES Jugador(Codigo),
-    CONSTRAINT CH_mg CHECK (Minuto<100)
+    CONSTRAINT FK_mg2 FOREIGN KEY (CodJug) REFERENCES Jugador(Codigo)
+    
 );
 ALTER TABLE Partido ADD(
-    CONSTRAINT FK_Par1 FOREIGN KEY (EquipoLoc) REFERENCES Equipo(Codigo),
-    CONSTRAINT FK_Par2 FOREIGN KEY (EquipoVis) REFERENCES Equipo(Codigo),
-    CONSTRAINT CH_Par CHECK (Fecha<21/06 OR Fecha>21/09),
-    CONSTRAINT CH_Par1 REQUIRED (Fecha)
+    CONSTRAINT FK_Par1 FOREIGN KEY (EquipoLoc,EquiposVis) REFERENCES Equipo(Codigo),
+    CONSTRAINT CH_Par CHECK (TO_CHAR(Fecha,'MMDD') NOT BETWEEN '0621' AND '0921'),
+    CONSTRAINT CH_Equ CHECK (EquipoLoc <> EquipoVis),
+    CONSTRAINT CH_Equ1 CHECK ()
 );
 ALTER TABLE Equipo ADD(
     CONSTRAINT FK_Equ FOREIGN KEY (DNI_Pres) REFERENCES Presidente(DNI),
-    CONSTRAINT CH_Equ CHECK (EquipoLoc =/ EquipoVis)
+    NumTitulos INT
 );
 ALTER TABLE Jugador ADD(
     CONSTRAINT CH_jug CHECK (Posicion IN('Centrocampista','Portero','Delantero','Defensa')),
-    CONSTRAINT CH_jug1 CHECK (Edad<30/01/2007)
+    CONSTRAINT CH_jug1 CHECK (MONTHS_BETWEEN (FechaAlta,FechaNac) >= 16*12)
 );
-ALTER TABLE Estadio ADD(
-    'DEFAULT'
-);
+
