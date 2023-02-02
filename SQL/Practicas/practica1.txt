@@ -36,12 +36,23 @@ CREATE TABLE marca_gol(
 ALTER TABLE marca_gol ADD(
     CONSTRAINT PK_mg PRIMARY KEY (CodPar,CodJug),
     CONSTRAINT FK_mg1 FOREIGN KEY (CodPar) REFERENCES Partido(Codigo),
-    CONSTRAINT FK_mg2 FOREIGN KEY (CodJug) REFERENCES Jugador(Codigo)
+    CONSTRAINT FK_mg2 FOREIGN KEY (CodJug) REFERENCES Jugador(Codigo),
+    CONSTRAINT CH_mg CHECK (Minuto<100)
 );
 ALTER TABLE Partido ADD(
     CONSTRAINT FK_Par1 FOREIGN KEY (EquipoLoc) REFERENCES Equipo(Codigo),
-    CONSTRAINT FK_Par2 FOREIGN KEY (EquipoVis) REFERENCES Equipo(Codigo) 
+    CONSTRAINT FK_Par2 FOREIGN KEY (EquipoVis) REFERENCES Equipo(Codigo),
+    CONSTRAINT CH_Par CHECK (Fecha<21/06 OR Fecha>21/09),
+    CONSTRAINT CH_Par1 REQUIRED (Fecha)
 );
 ALTER TABLE Equipo ADD(
-    CONSTRAINT FK_Equ FOREIGN KEY (DNI_Pres) REFERENCES Presidente(DNI)
+    CONSTRAINT FK_Equ FOREIGN KEY (DNI_Pres) REFERENCES Presidente(DNI),
+    CONSTRAINT CH_Equ CHECK (EquipoLoc =/ EquipoVis)
+);
+ALTER TABLE Jugador ADD(
+    CONSTRAINT CH_jug CHECK (Posicion IN('Centrocampista','Portero','Delantero','Defensa')),
+    CONSTRAINT CH_jug1 CHECK (Edad<30/01/2007)
+);
+ALTER TABLE Estadio ADD(
+    'DEFAULT'
 );
