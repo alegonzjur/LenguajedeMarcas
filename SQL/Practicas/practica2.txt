@@ -1,0 +1,60 @@
+CREATE TABLE COCHE(
+    Matricula CHAR(7) PRIMARY KEY,
+    Marca VARCHAR2(20) NOT NULL,
+    Modelo VARCHAR2(20) NOT NULL,
+    Color VARCHAR2(20),
+    PVP NUMBER(10),
+    CodCliente INTEGER
+);
+CREATE TABLE CLIENTE(
+    CodCliente INTEGER PRIMARY KEY,
+    NIF CHAR(9),
+    Nombre VARCHAR2(40),
+    Direccion VARCHAR2(40),
+    Telefono INTEGER,
+    Ciudad VARCHAR2(40)
+);
+CREATE TABLE REVISION(
+    Cod_Revision INTEGER PRIMARY KEY,
+    Fecha DATE,
+    Matricula CHAR(7)
+);
+CREATE TABLE consta_de(
+    Cod_Revision INTEGER,
+    Cod_Operacion INTEGER,
+);
+CREATE TABLE OPERACION(
+    Cod_Operacion INTEGER PRIMARY KEY,
+    Descripcion VARCHAR2(40),
+    Horas INTEGER
+);
+CREATE TABLE necesita(
+    Cod_Operacion INTEGER,
+    Cod_Material INTEGER,
+    Cantidad INTEGER DEFAULT (1)
+);
+
+CREATE TABLE MATERIAL(
+    Cod_Material INTEGER PRIMARY KEY,
+    Nombre VARCHAR2(40),
+    Precio NUMBER(8) 
+);
+ALTER TABLE COCHE ADD(
+    CONSTRAINT FK_COC FOREIGN KEY (CodCliente) REFERENCES CLIENTE(CodCliente),
+    CONSTRAINT CH_Color CHECK (Color IN('Verde','Rojo','Azul')),
+    CONSTRAINT CH_Precio CHECK (Precio BETWEEN (10000,40000))
+);
+ALTER TABLE REVISION ADD(
+    CONSTRAINT FK_REV FOREIGN KEY (Matricula) REFERENCES COCHE(Matricula)
+);
+ALTER TABLE consta_de ADD(
+    CONSTRAINT PK_con PRIMARY KEY (Cod_Revision, Cod_Operacion),
+    CONSTRAINT FK1_con FOREIGN KEY (Cod_Revision) REFERENCES REVISION(Cod_Revision),
+    CONSTRAINT FK2_con FOREIGN KEY (Cod_Operacion) REFERENCES OPERACION(Cod_Operacion)
+);
+ALTER TABLE OPERACION ADD(
+    CONSTRAINT PK_OPE PRIMARY KEY (Cod_Operacion,Cod_Material),
+    CONSTRAINT FK1_OPE FOREIGN KEY (Cod_Operacion) REFERENCES OPERACION(Cod_Operacion),
+    CONSTRAINT FK2_OPE FOREIGN KEY (Cod_Material) REFERENCES MATERIAL(Cod_Material),
+    CONSTRAINT CH_Horas CHECK (Horas<10)
+);
