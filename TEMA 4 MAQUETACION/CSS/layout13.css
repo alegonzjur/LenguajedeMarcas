@@ -1,17 +1,24 @@
-body{
-    /*Arriba y abajo - Derecha e izquierda */
-    margin: 40px 40px;
-    vertical-align: middle;
-    
+*{
+    box-sizing: border-box;
 }
-img{
-    text-align: right;
+.Container{
+    width: 60%;
+    margin: 40px;
+    text-align: left;
 }
 header{
-    width: 75%;
-    font-size: 10px;
+    color: rgb(12, 113, 228);
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: justify;
 }
-h1{
-    color: rgb(18, 148, 255);
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+.Superior{
+    padding: 10px;
+}
+.HSup{
+    font-size: 25px;
+}
+
+
+figure.imagen1{
+    width: 200px;
 }
