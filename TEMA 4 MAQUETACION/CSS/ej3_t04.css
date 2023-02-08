@@ -1,0 +1,56 @@
+*{
+    box-sizing: border-box;
+}
+
+.container{
+    width: 95%;
+    border: 1px solid black;
+    margin: 10px auto;
+}
+p{
+    font-size: 2em;
+    text-align: center;
+}
+header{
+    width: 95%;
+    background-color: black;
+    margin: 5px auto;
+    
+}
+header div{
+    display: inline-block;
+    padding: 25px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: white;
+}
+
+aside{
+    width: 15%;
+    height: 350px;
+    background-color: black;
+    float: left;
+    margin-top: 30px;
+    
+
+}
+aside div{
+    color: white;
+    padding: 10px;
+}
+
+.article{
+    width: 70%;
+    margin-top: 30px;
+    margin-left: 10%;
+    margin-right: 5%;
+}
+article{
+    border: 1px solid black;
+    width: 25%;
+    height: 175px;
+    float: left;
+    border-collapse: collapse;
+    margin-top: 30px;
+    
+}

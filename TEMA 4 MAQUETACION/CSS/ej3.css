@@ -1,0 +1,44 @@
+*{
+    box-sizing: border-box;
+    
+}
+.container{
+    background-color: darkgray;
+    width: 80%;
+    margin: 20px auto;
+}
+
+header{
+    background-color: yellow;
+    height: 100px;
+}
+
+.sidebar{
+    background-color:  blue;
+    height: 300px;
+    width: 20%;
+    float: left;
+
+}
+
+article{
+    background-color: green;
+    height: 150px;
+    width: 20%;
+    float: left;
+    margin-left: 5px;
+}
+main{
+    background-color: chocolate;
+    height: 150px;
+    float: left;
+    width: 60%;
+
+}
+footer{
+    background-color: red;
+    height: 50px;
+    width: 100%;
+    float: left;
+
+}
