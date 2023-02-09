@@ -4,7 +4,7 @@
 
 .container{
     width: 95%;
-    border: 1px solid black;
+
     margin: 10px auto;
 }
 p{
@@ -44,13 +44,58 @@ aside div{
     margin-top: 30px;
     margin-left: 10%;
     margin-right: 5%;
+    float: left;
+    
+
 }
 article{
-    border: 1px solid black;
-    width: 25%;
+    width: 30%;
     height: 175px;
     float: left;
-    border-collapse: collapse;
     margin-top: 30px;
+    border: 1px solid black;
+    border-collapse: collapse;
+    border-top-right-radius: 10px solid black;
+    border-top-left-radius: 5px solid black;
+    border-bottom-left-radius: 5px solid black; 
+    border-bottom-right-radius: 5px solid black;
     
+    
+}
+img{
+    width: 100px;
+    height: 100px;
+    
+}
+article p{
+    font-size: 10px;
+    float: left;
+}
+
+footer{
+    background-color: grey;
+    float: left;
+    height: 40px;
+    width: 100%;
+}
+footer p{
+    font-size: 15px;
+}
+nav{
+    font-size: 10px;
+    column-count: 1;
+    float: left;
+    height: 100px;
+    width: 20%;
+    margin-right: 10%;
+    
+}
+.column{
+    width: 70%;
+    margin-top: 30px;
+    margin-left: 10%;
+    margin-right: 5%;
+    float: left;
+    
+
 }
