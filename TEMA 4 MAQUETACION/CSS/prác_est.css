@@ -1,0 +1,130 @@
+*{
+    box-sizing: border-box;
+}
+
+.header{
+    background-color: black;
+    height: 100px;
+    width: 100%;
+    border-radius: 10px;
+    color: white;    
+}
+
+.header div{
+    padding: 10px;
+}
+.head{
+    width: 50%;
+    float: left;
+}
+.link{
+    float: left;
+    height: 10px;
+    width: 50%;
+    margin-top: 50px;
+    text-align: right;
+}
+h1{
+    color: white;
+    size: 2em;
+}
+
+.subheader{
+    background-color: rgb(97, 139, 34);
+    border-radius: 10px;
+    width: 100%;
+}
+
+.subheader div{
+    display: inline-block;
+    padding: 10px;
+    color: white;
+}
+.aside_left{
+    float: left;
+    width: 20%;
+    margin-left: 5px;
+    height: 30%;
+    background-color: lightgrey;
+    margin-top: 15px;
+    border-radius: 5px;
+    text-align: center;
+    margin-right: 20px;
+}
+.aside_left div{
+    margin-right: 5px;
+    margin-left: 5px;
+}
+.main{
+    width: 55%;
+    float: left;
+    height: 55%;
+    margin-top: 15px;
+    padding: 20px
+}
+
+.imagen img{
+    height: 200px;
+    padding: 20px;
+    margin-left: 100px;
+
+}
+.categorias{
+    background-color: grey;
+    border-bottom: 2px solid rgb(136, 221, 39);
+    border-radius: 2px;
+    padding: 3px;
+    color: black;
+    width: 100%;
+}
+
+.list{
+    float: left;
+    background-color: lightgrey;
+    color: rgba(21, 112, 51, 0.705);
+    width: 100%;
+    height: 150px;
+    border-radius: 5px;
+    border-bottom: 2px solid rgb(136, 221, 39);
+    margin-top: 10px;
+}
+.list img{
+    height: 70px;
+    float: right;
+    margin-top: 70px;
+    margin-right: 10px;
+}
+.list ul{
+    list-style-type: none;
+}
+.list ul li span{
+    color: black;
+}
+.aside_right{
+    float: left;
+    width: 20%;
+    margin-left: 15px;
+    height: 30%;
+    background-color: lightgrey;
+    margin-top: 15px;
+    border-radius: 5px;
+    text-align: center;
+    margin-right: 20px;
+}
+
+.footer{
+    float: left;
+    width: 100%;
+    background-color: rgb(37, 36, 36);
+    color: white;
+    height: 70px;
+    text-align: center;
+    border-radius: 2px;
+
+}
+
+
+.footer img{
+    height: 25px;
+    padding-bottom: 5px;
+}
