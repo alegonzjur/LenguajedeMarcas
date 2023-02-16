@@ -1,0 +1,11 @@
+ASOCIANDO TABLAS
+
+SELECT cod_tarea, descripción_tarea, dni_empleado, nombre_empleado 
+FROM TAREAS, EMPLEADOS
+WHERE TAREAS.dni_empleado = EMPLEADOS.dni_empleado;
+
+Se pueden utilizar alias:
+
+SELECT T.cod_tarea, T.descripción_tarea, E.dni_empleado, E.nombre_empleado
+FROM TAREAS T, EMPLEADOS E 
+WHERE T.dni_empleado = E.dni_empleado;
