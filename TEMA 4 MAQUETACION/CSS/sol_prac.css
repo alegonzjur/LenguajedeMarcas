@@ -1,0 +1,38 @@
+*{
+    box-sizing: border-box;
+}
+
+.container{
+    width: 90%;
+    margin: 10px auto;
+}
+
+.header{
+    background-color: black;
+    color: white;
+    overflow-y: auto;
+}
+.header div:first-child{
+    float: left;
+    width: 49%;
+}
+.header div:last-child{
+    float: left;
+    width: 49%;
+    text-align: right;
+    padding-top: 50px;
+}
+.subheader{
+    background-color: rgb(172, 212, 111);
+    color: white;
+    overflow-y: auto;
+}
+.subheader div{
+    float:left;
+    width: 15%;
+    
+}
+.footer{
+    background-color: black;
+    color: white;
+}

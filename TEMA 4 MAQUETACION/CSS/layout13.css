@@ -9,7 +9,7 @@
     margin-bottom: 20px;
 }
 .cont-izq{
-    width: 70%;
+    width: 60%;
 }
 
 header{
@@ -19,18 +19,98 @@ header{
     font-size: 10px;
 }
 .div-sup img{
-    height: 230px;
+    height: 300px;
     float: left;
     margin-top: 5px;
     
 }
 .nav-div{
-    margin-left: 10px;
+    margin-left: 40px;
     float: left;
-    height: 230px;
-    width: 15%;
+    height: 270px;
+    width: 40%;
 }
-.nav-div header{
-    font-size: 15px;
+.nav-div h2{
+    color: rgb(49, 108, 185);
+}
+
+.div-inf{
+    margin-top: 20px;
+    margin-bottom: 20px;
     float: left;
+    width: 100%;
+    height: 500px;
+}
+
+.nav-izq{
+    width: 40%;
+    margin-right: 40px;
+    height: 300px;
+    margin-bottom: 20px;
+    float: left;
+    
+    
+}
+.nav-izq img{
+    height: 220px;
+}
+.nav-div p{
+    text-align: justify;
+}
+.nav-drc{
+    width: 40%;
+    height: 200px;
+    float: left;
+}
+.nav-drc img{
+    height: 210px;
+}
+
+.asi-derc{
+     width: 35%;
+     height: 500px;
+     float: left;
+     margin-left: 10px;
+}
+.asi-derc img{
+    height: 250px;
+}
+section{
+    width: 83%;
+    float: left;
+    border: 1px solid black;
+    margin-top: 20px;
+    
+}
+section header{
+    color: white;
+    font-size: 20px;
+    background-color: black;
+    height: 50px;
+    float: left;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+section form{
+    font-size: 15px;
+    margin-left: 15px;
+    margin-right: 15px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    
+}
+select{
+    width: 100%;
+    margin-top: 10px;
+    
+}
+input[type='text']{
+    width: 95%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.button input{
+    width: 5%;
 }
