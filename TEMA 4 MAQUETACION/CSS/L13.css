@@ -5,12 +5,14 @@
 }
 
 .container{
-    width: 95% auto;
+    width: 85% auto;
 }
 
 h1, h2{
     color: rgb(49, 108, 185);
+    font-family: "Open Sans", sans-serif;
 }
+
 
 /*Parte central (main)*/
 main{
@@ -41,6 +43,9 @@ main{
     width: 45%;
     margin-left: 40px;
     height: 350px;
+}
+strong{
+    font-family: "Open Sans",sans-serif;
 }
 
 /*Parte inferior*/
@@ -77,7 +82,7 @@ main{
 aside{
     width: 30%;
     float: left;
-    height: 700px;
+    height: 200px;
     margin-top: 45px;
 }
 aside img{
@@ -88,8 +93,8 @@ aside img{
 aside section{
     margin-top: 20px;
     width: 80%;
-    height: 450px;
-    border: 1px solid black;
+    height: 200px;
+    
     
 }
 
@@ -108,4 +113,60 @@ h3{
     padding-top: 15px;
 }
 
+aside form{
+    border: 1px solid black;
+    text-align: center;
+    height: 520px;
+}
 
+input{
+    padding: 1em;
+    height: auto;
+    border: 1px  #eaeaea;
+    background: #fafafa;
+    width: 90%;
+    margin-bottom: 30px;
+}
+select{
+    padding: 1em;
+    height: auto;
+    border: 1px  #eaeaea;
+    background: #fafafa;
+    width: 90%;
+    margin-bottom: 30px;
+}
+article{
+    border: 0;
+    font-size: 100%;
+    font-style: inherit;
+    font-weight: inherit;
+    padding: 0;
+}
+
+form section input{
+    text-align: left;
+    padding: 5px;
+    margin-left: 20px;
+    margin-right: 0px;
+    width: 10px;
+    float: left;
+    margin-bottom: 5px;
+    text-align: justify;
+}
+
+form section button{
+    width: 122%;
+    height: 50px;
+    margin-left: 5px;
+    margin-top: 10px;
+    color: #eaeaea;
+    background-color: rgb(49, 108, 185);
+    font-family: "Open Sans", sans-serif;
+    
+
+}
+
+p{
+    font-family: "Open Sans", sans-serif;
+    
+}

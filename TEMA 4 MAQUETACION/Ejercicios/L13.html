@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Layout 13</title>
+    <title>Layout - Alejandro Román González Jurado</title>
     <link rel="stylesheet" href="../CSS/L13.css" type="text/css">
 </head>
 <body>
@@ -17,7 +17,8 @@
                 <img src="../Archivos/publi1.jpg" alt="IMG1">
                 <nav>
                     <h2>MEJORA LA CALIDAD DEL AGUA POTABLE</h1>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam veritatis nemo molestiae voluptatum fugiat, dolorum, possimus, neque veniam aspernatur quibusdam obcaecati illum voluptatem excepturi nostrum alias nesciunt cupiditate tenetur laborum.</p>
+                    <strong>LA QUE BEBES, LA QUE USAS PARA EL TÉ, EL CAFÉ O COCINAR...</strong>
+                    <p>La calidad del agua es esencial para nuestra salud y bienestar. Elimina el cloro para devolver sus beneficios naturales al agua, reduce los residuos para hacer que el agua sea más liviana, elimina las bacterias y sustancias no deseadas para garantizar la máxima seguridad.</p>
                 </nav>
             </div>
             <div class="div-inf">
@@ -25,7 +26,7 @@
                     <header>
                         <h2>ADIOS A LAS BOTELLAS DE PLÁSTICO</h2>
                     </header>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id illo velit sit aut facilis molestias quis consectetur. Nisi voluptatibus dolorem exercitationem illum, veritatis voluptatem, quis similique eum laboriosam nemo ea!</p>
+                    <p>Gracias a los filtros de ósmosis inversa y la ultrafiltración de Culligan, despídete del plástico y deja de cargar botellas de agua hasta casa. ¡Ahorra tiempo y espacio!</p>
                     <img src="../Archivos/publi4.jpg" alt="IMG3">
                 </nav>
                 <section>
@@ -33,7 +34,7 @@
                     <header>
                         <h2>¿CÓMO FUNCIONA UN EQUIPO DE ÓSMOSIS INVERSA?</h2>
                     </header>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro iusto error laborum non quam, nisi ducimus qui ut consectetur nam provident molestiae fugit ipsum, laudantium tempore eius, obcaecati architecto deleniti.</p>
+                    <p>Los sistemas de Ósmosis Inversa de Culligan están equipados con una tecnología segura y consolidada que separa el agua del grifo en dos flujos: el principal con el agua filtrada para beber, y por otro lado, los restos con impurezas.</p>
                 </section>
             </div>
         </div>
@@ -46,20 +47,17 @@
                 <form>
                     <p>Te ayudamos a encontrar la mejor solución para tu hogar.</p>
                     <article>
-                        <label for="Nombre">Nombre*</label>
-                        <input type="text" id="Nombre">
+                        <input type="text" id="Nombre" required placeholder="Nombre*">
                     </article>
                     <article>
-                        <label for="Telefono">Telefono*</label>
-                        <input type="text" id="Telefono">
+                        <input type="text" id="Telefono" required placeholder="Teléfono*">
                     </article>
                     <article>
-                        <label for="Email">Email*</label>
-                        <input type="text" id="Email">
+                        <input type="text" id="Email" required placeholder="Email*">
                     </article>
                     <article>
-                        <label for="Provincia">Elige Provincia</label>
-                        <select name="Provincia" id="Provincia">
+                        <select name="Provincia" id="Provincia" required>
+                            <option value="Elige provincia" disabled selected value>Elige Provincia*</option>
                             <option value="Almería">Almería</option>
                             <option value="Cádiz">Cádiz</option>
                             <option value="Córdoba">Córdoba</option>
@@ -70,9 +68,9 @@
                             <option value="Sevilla">Sevilla</option>
                         </select>
                     </article>
-                    <section class="button">
-                        <input type="checkbox" name="politica" id="politica">
-                        <label for="politica">He leído y acepto la privacidad.</label>
+                    <section>
+                        <input type="checkbox" name="politica" id="politica" required>
+                        <p>He leído y acepto la privacidad.</p>
                         <input type="checkbox" name="info" id="info">
                         <label for="info">Acepto recibir información, novedades y otras promociones</label>
                         <button type="submit">Enviar</button>
