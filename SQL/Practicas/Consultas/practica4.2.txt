@@ -1,0 +1,17 @@
+/* Ejercicio 1*/
+SELECT nomde FROM DEPARTAMENTOS WHERE tidir = 'F' ORDER BY 1;
+/*Ejercicio 2*/
+SELECT nomem, nummem, extel FROM EMPLEADOS WHERE numde= 121 ORDER BY 1;
+/*Ejercico 3*/
+SELECT nummem, extel FROM EMPLEADOS WHERE numde=110 ORDER BY 1;
+/*Ejercicio 4*/
+SELECT comis, nomem, salar  FROM EMPLEADOS WHERE numhi=3 ORDER BY 1, 2;
+/*Ejercicio 5*/
+SELECT comis, nomem, salar FROM EMPLEADOS WHERE numhi=3 AND comis IS NOT NULL ORDER BY 1, 2;
+/*Ejercicio 6*/
+SELECT salar, nomem FROM EMPLEADOS WHERE numhi=0 AND (1200<salar<1500) ORDER BY 1 DESC,2;
+/*Ejercicio 7*/
+SELECT numde FROM EMPLEADOS WHERE salar<1500;
+/*Ejercicio 8*/
+SELECT comis FROM DEPARTAMENTOS WHERE numde=110;
+ 
