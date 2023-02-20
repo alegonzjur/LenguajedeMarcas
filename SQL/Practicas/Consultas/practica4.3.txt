@@ -1,0 +1,13 @@
+/*Ejercicio 1*/
+SELECT 'DEPARTAMENTO DE ' || nomde AS "NOMBRE" FROM DEPARTAMENTOS WHERE presu<30 ORDER BY nomde ASC;
+
+/*Ejercicio 2*/
+SELECT numde ||'-'|| nomde AS "Número-nombre", tidir AS "Tipo de Director" FROM DEPARTAMENTOS WHERE presu<30 ORDER BY nomde ASC;
+
+/*Ejercicio 3*/
+SELECT nomem AS "Nombre", 
+salar*12 AS "Salario 2014", 
+salar*1.02*12 AS "Salario 2015", 
+salar*1.0404*12 AS "Salario 2016"
+FROM EMPLEADOS
+WHERE numhi>4 ORDER BY nomem ASC;
