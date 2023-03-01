@@ -1,0 +1,38 @@
+*{
+    box-sizing: border-box;
+}
+
+.container{
+    width: 80%;
+    margin: 0px auto;
+
+}
+
+header{
+
+    display: flex;
+
+    /*Dirección*/
+    /*flex-direction: column-reverse;*/
+   
+
+    /*Anchura*/
+    flex-wrap: wrap-reverse;
+    /*flex-flow: row wrap*/
+
+    /*Alineación horizontal*/
+    justify-content: space-between;
+    /*justify-content: flex-start,flex-end, center, space-between,space-around,space-evenly*/
+
+    /*Alineación vertical*/
+    align-items: flex-start;
+    /*align-items: flex-start, flex-end, center, stretch, baseline*/
+}
+
+/*div{*/
+
+
+    /*align-items: ;*/
+    /*flex-start, flex-end, center, strecth (no debe tener altura establecida), baseline
+*/
+/*}*/
