@@ -10,7 +10,7 @@ salar*12 AS "Salario 2014",
 salar*1.02*12 AS "Salario 2015", 
 salar*1.0404*12 AS "Salario 2016"
 FROM EMPLEADOS
-WHERE numhi>4 ORDER BY nomem ASC;
+WHERE numhi>4 ORDER BY "Nombre" ASC;
 
 /*Ejercico 4*/
 SELECT nomem FROM EMPLEADOS 
