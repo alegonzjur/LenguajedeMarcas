@@ -33,7 +33,7 @@ ORDER BY "Salario Total" DESC;
 
 /*Ejercicio 7*/
 SELECT nomem AS "Nombre",
-salar+comis ||'€' AS "Salario Total" 
+salar+comis ||' €' AS "Salario Total" 
 FROM EMPLEADOS
 WHERE numde = 112 and comis IS NOT NULL
 ORDER BY "Salario Total" DESC;
