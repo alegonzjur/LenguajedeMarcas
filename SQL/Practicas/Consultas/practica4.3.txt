@@ -1,8 +1,8 @@
 /*Ejercicio 1*/
-SELECT 'DEPARTAMENTO DE ' || nomde AS "NOMBRE" FROM DEPARTAMENTOS WHERE presu<30 ORDER BY nomde ASC;
+SELECT 'DEPARTAMENTO DE ' || nomde AS "NOMBRE" FROM DEPARTAMENTOS WHERE presu<30 ORDER BY "NOMBRE" ASC;
 
 /*Ejercicio 2*/
-SELECT numde ||'-'|| nomde AS "Número-nombre", tidir AS "Tipo de Director" FROM DEPARTAMENTOS WHERE presu<30 ORDER BY nomde ASC;
+SELECT numde ||'-'|| nomde AS "Número-nombre", tidir AS "Tipo de Director" FROM DEPARTAMENTOS WHERE presu<30 ORDER BY "" ASC;
 
 /*Ejercicio 3*/
 SELECT nomem AS "Nombre", 
@@ -11,3 +11,31 @@ salar*1.02*12 AS "Salario 2015",
 salar*1.0404*12 AS "Salario 2016"
 FROM EMPLEADOS
 WHERE numhi>4 ORDER BY nomem ASC;
+
+/*Ejercico 4*/
+SELECT nomem FROM EMPLEADOS 
+WHERE 120*numhi>0.20*salar 
+ORDER BY nomem ASC;
+
+/*Ejercicio 5*/
+SELECT nomem AS "Nombre",
+salar+comis AS "Salario Total"
+FROM EMPLEADOS
+WHERE numde = 112
+ORDER BY "Salario Total" DESC;
+
+/*Ejercicio 6*/
+SELECT nomem AS "Nombre",
+salar+comis AS "Salario Total"
+FROM EMPLEADOS
+WHERE numde = 112 and comis IS NOT NULL
+ORDER BY "Salario Total" DESC;
+
+/*Ejercicio 7*/
+SELECT nomem AS "Nombre",
+salar+comis ||'€' AS "Salario Total" 
+FROM EMPLEADOS
+WHERE numde = 112 and comis IS NOT NULL
+ORDER BY "Salario Total" DESC;
+
+/*Ejercicio 8*/

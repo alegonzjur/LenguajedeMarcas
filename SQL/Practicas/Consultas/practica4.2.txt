@@ -17,8 +17,8 @@ SELECT comis, nomem, salar FROM EMPLEADOS WHERE numhi=3 AND comis IS NOT NULL OR
 SELECT salar, nomem FROM EMPLEADOS WHERE numhi=0 AND (1200<salar<1500) ORDER BY salar DESC, salar ASC;
 
 /*Ejercicio 7*/
-SELECT numde FROM EMPLEADOS WHERE salar<1500;
+SELECT numde FROM EMPLEADOS WHERE salar<1500 ORDER BY numde ASC;
 
 /*Ejercicio 8*/
-SELECT comis FROM EMPLEADOS WHERE numde=110;
+SELECT comis FROM EMPLEADOS WHERE numde=110 ORDER BY comis ASC;
  
