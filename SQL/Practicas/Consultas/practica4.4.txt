@@ -1,0 +1,32 @@
+/* Ejercicio 1 */
+SELECT nomem
+FROM EMPLEADOS
+WHERE salar > ALL (SELECT salar
+                    FROM EMPLEADOS
+                    WHERE numde=122)
+ORDER BY nomem ASC;
+
+/* Ejercicio 2 */ 
+SELECT nomem 
+FROM EMPLEADOS
+WHERE salar > ALL (SELECT salar
+                    FROM EMPLEADOS
+                    WHERE numde=150)
+ORDER BY nomem ASC;
+
+/* Ejercicio 3 */
+SELECT nomem
+FROM EMPLEADOS
+WHERE salar > SOME (SELECT 2.5*salar
+                    FROM EMPLEADOS
+                    WHERE numde=122)
+ORDER BY nomem ASC;
+
+/* Ejercicio 4 */
+SELECT nomem,salar 
+FROM EMPLEADOS
+WHERE salar = SOME(SELECT 10*comis
+                    FROM EMPLEADOS
+                    WHERE comis IS NOT NULL)
+ORDER BY nomem ASC;
+
