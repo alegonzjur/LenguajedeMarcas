@@ -30,3 +30,18 @@ WHERE salar = SOME(SELECT 10*comis
                     WHERE comis IS NOT NULL)
 ORDER BY nomem ASC;
 
+/* Ejercicio 5 */
+SELECT nomem, salar
+FROM EMPLEADOS
+WHERE salar > ALL(SELECT 20*comis 
+                    FROM EMPLEADOS
+                    WHERE comis IS NOT NULL)
+ORDER BY nomem ASC;
+
+/* Ejercicio 6 */
+SELECT nomen, salar 
+FROM EMPLEADOS
+WHERE salar < ALL(SELECT 20*comis
+                    FROM EMPLEADOS
+                    WHERE comis IS NOT NULL)
+ORDER BY nomem ASC;

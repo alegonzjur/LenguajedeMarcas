@@ -1,0 +1,12 @@
+/* Ejercicio 1 */
+SELECT nomem 
+FROM EMPLEADOS
+WHERE salar BETWEEN 1500 AND 1600
+ORDER BY nomem ASC;
+
+/* Ejercicio 2*/
+SELECT nomem, salar
+FROM EMPLEADOS
+WHERE salar NOT BETWEEN 720*numhi AND 50*comis*numhi 
+AND comis IS NOT NULL
+ORDER BY nomem ASC; 
