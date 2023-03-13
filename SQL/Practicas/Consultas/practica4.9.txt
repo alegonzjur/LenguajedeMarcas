@@ -1,0 +1,51 @@
+/* Ejercicio 1*/
+SELECT nomem, comis
+FROM EMPLEADOS 
+WHERE numde=110 AND EXISTS (SELECT *
+                            FROM EMPLEADOS
+                            WHERE numde=110 AND comis IS NOT NULL)
+ORDER BY nomem ASC;
+
+/* Ejercicio 2*/
+SELECT nomde 
+FROM DEPARTAMENTOS 
+WHERE nomde NOT LIKE '%DIRECC%' AND nomde NOT LIKE '%SECTOR%';
+
+/* Ejercicio 3*/
+SELECT nomem AS "NOMBRE",
+salar AS "SALARIO"
+FROM EMPLEADOS
+WHERE (nunhi=0 AND salar>1500) OR (numhi>0 AND salar<1000) 
+ORDER BY "NOMBRE" ASC;
+
+/* Ejercicio 4*/
+SELECT 'nº' || numem AS "NUMERO EMPLEADO",
+nomem AS "NOMBRE",
+salar+comis || ' €' AS "SALARIO TOTAL"
+FROM EMPLEADOS
+WHERE (salar+comis)>SOME(SELECT salar+1800 FROM EMPLEADOS)
+ORDER BY "NUMERO EMPLEADO" ASC;
+
+/* Ejercicio 5 */
+SELECT nomem, salar
+FROM EMPLEADOS
+WHERE (numde=111) AND (comis IS NOT NULL) AND EXISTS (SELECT *
+                                                    FROM EMPLEADOS
+                                                    WHERE (numde=111) AND (comis > 0.15*salar))
+ORDER BY nomem ASC;
+
+/* Ejercicio 6*/
+SELECT nomde  AS "Nombre de Departamento",
+tidir AS "Tipo director", 
+presu AS "Presupuesto"
+FROM DEPARTAMENTOS
+WHERE (Tidir='F') OR (Tidir='P' AND (presu>30 OR depde IS NULL));
+
+/* Ejercicio 7*/
+SELECT nomde AS"Nombre de Departamento",
+tidir AS "Tipo director",
+presu ||'.000 C' AS "Presupuesto"
+FROM DEPARTAMENTOS
+WHERE (Tidir='F') OR (Tidir='P' AND (presu > 30 OR depde IS NULL));
+
+

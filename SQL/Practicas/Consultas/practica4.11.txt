@@ -1,0 +1,25 @@
+/*Ejercicio 1*/
+SELECT avr(salar) AS "Salario medio",
+min(salar) AS "Salario minimo",
+max(salar) AS "Salario máximo"
+FROM EMPLEADOS;
+
+/*Ejercicio 2*/
+SELECT salar, 
+nomem 
+FROM EMPLEADOS
+WHERE salar*1,40 > max(salar)
+ORDER by salar ASC;
+
+/* Ejercicio 3*/
+SELECT TRUNC(MAX((SYSDATE-fecna)/365)) AS "Edad"
+FROM EMPLEADOS
+WHERE numde = 110;
+
+/* Ejercicio 4*/
+SELECT nomem,
+TRUNC(MAX((SYSDATE-fecna)/365)) AS "Edad"
+FROM EMPLEADOS
+WHERE numde = 110;
+
+/* Ejercicio 5*/
