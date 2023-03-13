@@ -1,0 +1,20 @@
+/*Ejercicio 1*/
+SELECT numde,
+COUNT(nomem)
+FROM EMPLEADOS 
+GROUP BY numde;
+
+/*Ejercicio 2*/
+SELECT numde,
+avg(salar) AS "Salario medio",
+min(salar) AS "Salario minimo",
+max(salar) AS "Salario máximo"
+FROM EMPLEADOS
+GROUP BY numde;
+
+/*Ejercicio 3*/
+SELECT comis,
+avg(salar) AS "Salario medio",
+TRUNC(AVG((SYSDATE-fecna)/365)) AS "Edad media"
+FROM EMPLEADOS
+GROUP BY comis;

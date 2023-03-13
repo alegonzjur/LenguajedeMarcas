@@ -20,6 +20,12 @@ WHERE numde = 110;
 SELECT nomem,
 TRUNC(MAX((SYSDATE-fecna)/365)) AS "Edad"
 FROM EMPLEADOS
-WHERE numde = 110;
+WHERE numde = 110
+GROUP BY ;
 
 /* Ejercicio 5*/
+SELECT COUNT(nomem), 
+COUNT(DISTINCT comis),
+SUM(comis)
+FROM EMPLEADOS
+WHERE numde = 112 AND COMIS IS NOT NULL;
