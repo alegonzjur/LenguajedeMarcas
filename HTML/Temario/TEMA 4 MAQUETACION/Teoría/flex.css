@@ -1,0 +1,46 @@
+*{
+    box-sizing: border-box;
+}
+h1{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: medium;
+}
+.container{
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex; 
+    /*Ajusta la anchura a su contenido, y todos los elementos flotan a la izquierda*/
+}
+
+main{
+    width: 85%;
+    height: 65%;
+}
+section{
+    display: flex;
+    width: 60%;
+    margin-right: 20px;
+    /*Edita la dirección de los elementos flexibles.*/
+    flex-direction: row-reverse;
+    /*Posibles valores:
+        - row: Por defecto. Elementos de izquierda a derecha.
+        - row-reverse: Elementos de derecha a izquierda.
+        - column: Elementos flexibles en columna, de arriba a abajo.
+        - column-reverse: Elementos flexibles en columna, de abajo a arriba.
+    */
+    /*Ajuste de los elementos flexibles.*/
+    flex-wrap: wrap;
+    /*Posibles valores:
+        - nowrap: Valor por defecto. Los elementos estarán en la misma línea
+                aunque esto suponga que se salga del contenedor.
+        - wrap: Provoca un salto de línea si la anchura de los elementos es superior
+                a la del contenedor. 
+        - wrap-reverse: Igual, solo que el cambio es de abajo a arriba.*/
+    flex-flow: wrap row-reverse;
+    /* Junta las dos propiedas anteriores en una.*/
+}
+main img{
+    width: 70%;
+    height: 65%;
+}
