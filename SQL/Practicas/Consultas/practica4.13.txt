@@ -1,0 +1,34 @@
+/*Ejercicio 1*/
+SELECT extel,
+COUNT(nomem)
+FROM EMPLEADOS
+GROUP BY extel
+HAVING COUNT(nomem)>1;
+
+/*Ejercicio 2*/
+SELECT numce,
+avg(presu) AS "Presupuesto Medio"
+FROM DEPARTAMENTOS
+GROUP BY numce;
+
+/*Ejercicio 3*/
+SELECT numce,
+tidir AS "T",
+avg(presu) AS "Presupuesto Medio"
+FROM DEPARTAMENTOS
+GROUP BY numce, tidir;
+
+/*Ejercicio 4*/
+SELECT numde, 
+COUNT(DISTINCT extel) AS "exten telefonicas"
+FROM EMPLEADOS
+GROUP BY numde 
+HAVING AVG(salar) > (SELECT AVG(salar) FROM EMPLEADOS);
+
+/*Ejercicio 5*/
+SELECT numde, 
+sum(salar)
+FROM EMPLEADOS
+GROUP BY NUMDE
+HAVING sum(salar) >= ALL(SELECT sum(salar) 
+                            FROM EMPLEADOS GROUP BY numde);
