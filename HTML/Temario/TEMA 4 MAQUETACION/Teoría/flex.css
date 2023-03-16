@@ -37,8 +37,37 @@ section{
         - wrap: Provoca un salto de línea si la anchura de los elementos es superior
                 a la del contenedor. 
         - wrap-reverse: Igual, solo que el cambio es de abajo a arriba.*/
-    flex-flow: wrap row-reverse;
     /* Junta las dos propiedas anteriores en una.*/
+    flex-flow: wrap row-reverse;
+    /*Alineación horizontal de los elementos flexibles*/
+    justify-content: flex-start;
+    /*Posibles valores:
+        flex-start: Los elementos flexibles se situan al principio.
+        flex-end: Los elementos flexibles se situal al final.
+        center: Los elementos se centran horizontalmente.
+        space-between: Distribuye el espacio restante entre los elementos pero el primero
+                        y el último están en los bordes.
+        space-around: Distribuye el espacio restante entre los elementos pero no tiene en 
+                        cuenta la distancia a los bordes.
+        space-evenly: Distribuye el espacio restante entre los elementos y tienen en cuenta 
+                        la distancia a los bordes.*/
+    /*Alineación vertical de los elementos flexibles.*/
+    align-items: baseline;
+        /*Posibles valores:
+        flex-start: Los elementos se ponen junto al borde superior.
+        flex-end: Los elementos se ponen junto al borde inferior.
+        center: Los elementos flexibles se centran verticalmente.
+        stretch: Los elementos crecen en altura para ocupar toda la altura del contenedor flexible. No deben tener altura fija establecida.
+        baseline: Los elementos se alinean en relación a la primera línea de texto que posean los elementos flexibles.*/
+    /*Alineación vertical (varias lineas)*/
+    flex-wrap: wrap;
+        /*Posibles valores:
+            flex-start, flex-end, center, stretch, space-between, space-around.*/
+    /*Orden de los elementos flexibles.*/
+    order: 1;
+        /*El valor por defecto es 0, y se mostrarán en orden ascendente*/
+
+    
 }
 main img{
     width: 70%;
