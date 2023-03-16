@@ -15,6 +15,32 @@ GROUP BY numde;
 /*Ejercicio 3*/
 SELECT comis,
 avg(salar) AS "Salario medio",
+ROUND(AVG((SYSDATE-fecna)/365)) AS "Edad media"
+FROM EMPLEADOS
+GROUP BY comis;
+
+/*Ejercicio 4*/
+SELECT comis,
+avg(salar) AS "Salario medio",
 TRUNC(AVG((SYSDATE-fecna)/365)) AS "Edad media"
 FROM EMPLEADOS
 GROUP BY comis;
+
+/*Ejercicio 5*/
+SELECT numde, 
+comis, 
+AVG(salar) AS "Salario medio",
+TRUNC(AVG((SYSDATE-fecna)/365)) AS "Edad media"
+FROM EMPLEADOS
+GROUP BY numde, comis
+ORDER BY numde ASC;
+
+/*Ejercicio 6*/
+SELECT numde,
+COUNT(nomem),
+SUM(salar)
+FROM EMPLEADOS
+WHERE numde IN (SELECT numde
+                FROM EMPLEADOS
+                WHERE salar>2500)
+GROUP BY numde;
