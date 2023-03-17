@@ -1,0 +1,6 @@
+/* Ejercicio 1*/
+SELECT nomde,
+nomce, 
+max(salar)
+FROM EMPLEADOS E
+

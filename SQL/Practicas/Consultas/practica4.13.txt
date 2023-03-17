@@ -16,7 +16,7 @@ SELECT numce,
 tidir AS "T",
 avg(presu) AS "Presupuesto Medio"
 FROM DEPARTAMENTOS
-GROUP BY numce, tidir;
+GROUP BY numce;
 
 /*Ejercicio 4*/
 SELECT numde, 

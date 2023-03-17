@@ -1,0 +1,8 @@
+SELECT CampoT1, CampoT2
+FROM Tabla1 T1 JOIN Tabla2 CampoT2
+ON T1CampoComun1 = T2CampoComun1 
+WHERE T1.Campo1 > T2.Campo2 (Se utilizan los alias)
+GROUP BY ...
+HAVING ...
+
+
