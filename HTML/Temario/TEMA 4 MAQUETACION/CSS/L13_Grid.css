@@ -12,43 +12,180 @@ h1,h2{
     color: rgb(49, 108, 185);
 }
 
-
-/*Div general, rejilla Grid.*/
+/*Container*/
 .container{
     width: 90%;
     margin: 0 auto;
     font-family: "Open Sans", sans-serif;
+    margin-top: 40px;
+    display: flex;
+}
+
+/*Main, parte izquierda. */
+main{
+    width: 60%;
     display: grid;
-    grid-template-columns: 30% 30% 30%;
+    grid-template-columns: 50% 50%;
     grid-template-rows: 100px 350px 250px 250px;
     grid-column-gap: 2em;
     grid-row-gap: 1em;
-    margin-top: 40px;
 }
-
-/*Cabecera de la página*/
+/*Cabecera de la página. */
 header{
     grid-column: 1/3;
     grid-row: 1/2;
 }
-/*Imagen de la parte superior derecha*/
-.container>img{
-    grid-column: 3/4;
-    grid-row: 1/3;
-    width: 70%;
-    margin-left: 40px;   
-}
-/*Parte superior izquierda*/
 
-.second_row img{
+
+
+/*Segunda fila. */
+.img1{
     grid-column: 1/2;
     grid-row: 2/3;
     width: 100%;
 }
 
-.second_row nav{
+.sec_nav{
     grid-column: 2/3;
+    grid-row: 2/3;
+    width: 100%;
+
+}
+.sec_nav p{
+    padding: 10px;
+    text-align: justify;
+    
+}
+.sec_nav h2{
+    margin-bottom: 20px;
+}
+
+/*Tercera fila. */
+
+.ter_nav{
+    grid-column: 1/2;
+    grid-row: 3/4;
+    width: 100%;
+    margin-top: 20px;
+}
+.ter_nav p{
+    padding: 10px;
+    text-align: justify;
+}
+.img2{
+    grid-column: 2/3;
+    grid-row: 3/4;
+    width: 100%;
+    margin-top: 20px;
+}
+
+/*Cuarta fila. */
+
+.img3{
+    grid-column: 1/2;
+    grid-row: 4/5;
+    width: 100%;
+    margin-top: 20px;
+}
+main div{
+    grid-column: 2/3;
+    grid-row: 4/5;
+    width: 100%;
+    margin-top: 70px;
+}
+
+main div p{
+    padding: 10px;
+    text-align: justify;
+}
+
+/*Aside, parte de la derecha. */
+
+aside{
+    width: 30%;
+    display: grid;
+    grid-template-rows: 100px 350px 250px 250px;
+    grid-template-columns: 100%;
+    margin-left: 100px;
+    grid-row-gap: 0px;
+}
+
+aside img{
+    grid-column: 1/2;
     grid-row: 2/3;
     width: 100%;
 }
 
+aside form{
+    grid-column: 1/2;
+    grid-row: 3/5;
+    width: 100%;
+    border: 1px solid rgb(58, 57, 57);
+}
+
+aside form h3{
+    grid-column: 1/2;
+    grid-row: 3/4;
+    font-family: "Open Sans", sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+    padding-top: 15px;
+    background-color: rgb(58, 57, 57);
+    color: white;
+    height: 60px;
+    width: 100%;
+    text-align: center;
+
+}
+
+aside form p{
+    margin-top: 20px;
+    text-align: center;
+    font-size: 0,5em;
+}
+article{
+    border: 0;
+    font-size: 100%;
+    font-style: inherit;
+    font-weight: inherit;
+    padding: 0;
+}
+input, select{
+    padding: 1em;
+    height: auto;
+    border: 1px  #eaeaea;
+    background: #fafafa;
+    width: 90%;
+    margin-bottom: 30px;
+    margin-left: 15px;
+}
+select{
+    margin-bottom: 40px;
+}
+form section{
+    margin-top: 0px;
+}
+
+form section input{
+    text-align: left;
+    margin-left: 20px;
+    margin-right: 0px;
+    width: 10px;
+    margin-bottom: 5px;
+    
+}
+section button{
+    width: 100%;
+    height: 40px;
+    color: #eaeaea;
+    background-color: rgb(49, 108, 185);
+    font-family: "Open Sans", sans-serif;
+    padding-right: 0;
+    margin-top: 30px;
+}
+
+form section label{
+    font-size: 15px;
+    text-align: center;
+    margin-top: 20px;
+}
