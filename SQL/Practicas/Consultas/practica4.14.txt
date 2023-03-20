@@ -2,5 +2,83 @@
 SELECT nomde,
 nomce, 
 max(salar)
-FROM EMPLEADOS E
+FROM EMPLEADOS E JOIN DEPARTAMENTOS D
+    ON E.numde = D.numde 
+    JOIN CENTROS C 
+    ON D.numce = C.numce
+WHERE presu < 35
+GROUP BY D.nomde, nomce
+HAVING MAX(salar) >1500
+ORDER BY numce ASC;
+
+/*Ejercicio 2*/
+SELECT nomde AS "Departamento",
+
+
+/*Ejercicio 3*/
+SELECT nomde,
+avg(salar) AS "Salario Medio",
+FROM EMPLEADOS E JOIN DEPARTAMENTOS D
+ON E.numde = D.numde 
+GROUP BY E.numde,
+HAVING AVG(salar) > (SELECT AVG(salar) FROM EMPLEADOS);
+
+
+/*Ejercicio 4*/
+SELECT nomde,
+COUNT(numem),
+SUM(salar),
+SUM(comis),
+SUM(numhi)
+FROM DEPARTAMENTOS D JOIN EMPLEADOS E 
+ON D.numde = E.numde 
+WHERE tidir = 'F'
+GROUP by nomde;
+
+/*Ejercicio 5*/
+SELECT nomde,
+extel,
+COUNT(numem),
+FROM DEPARTAMENTOS D JOIN EMPLEADOS E
+ON D.numde = E.numde
+WHERE presu > 35
+GROUP BY nomde, extel;
+
+/*Ejercicio 6*/
+SELECT nomem,
+numhi,
+FROM EMPLEADOS E JOIN DEPARTAMENTOS D
+ON E.numde = D.numde
+WHERE nomem IN (SELECT direc IN DEPARTAMENTOS
+                    WHERE tidir='F')
+ORDER BY 1;
+
+/*Ejercicio 7*/
+SELECT nomem,
+numhi,
+FROM DEPARTAMENTOS D JOIN EMPLEADOS E 
+ON D.numde = E.numde
+GROUP BY E.numde
+HAVING COUNT(NUMEM) IS NULL AND (TIDIR="F" OR TIDIR IS NULL);
+
+/*Ejercicio 8*/
+INSERT INTO DEPARTAMENTOS(tidir,nomde) VALUES('F','NUEVO');
+
+/*Ejercicio 9*/
+INSERT INTO EMPLEADOS(numem,nomem) VALUES(33,'NORBERTO');
+
+/*Ejercicio 10*/
+SELECT nomde 
+FROM DEPARTAMENTOS D JOIN EMPLEADOS E 
+    ON D.numde = E.numde 
+WHERE D.numde NOT IN (SELECT numde FROM EMPLEADOS);
+
+/*Ejercicio 11*/
+SELECT nomde
+FROM EMPLEADOS E LEFT JOIN DEPARTAMENTOS D 
+    ON E.numde = D.numde
+WHERE numem IS NULL;
+
+/*Ejercicio 12*/
+ 
 
