@@ -8,19 +8,23 @@ FROM EMPLEADOS E JOIN DEPARTAMENTOS D
     ON D.numce = C.numce
 WHERE presu < 35
 GROUP BY D.nomde, nomce
-HAVING MAX(salar) >1500
-ORDER BY numce ASC;
+HAVING MAX(salar) >1500;
 
 /*Ejercicio 2*/
-SELECT nomde AS "Departamento",
+SELECT D2.nomde AS "Departamento", D1.nomde AS "Dpto. del que depende", D1.presu 
+FROM DEPARTAMENTOS D1 JOIN DEPARTAMENTOS D2 
+    ON D1.numde = D2.depde
+WHERE D2.depde IN (SELECT numde FROM DEPARTAMENTOS WHERE PRESU<30)
+ORDER BY 1;
+
 
 
 /*Ejercicio 3*/
 SELECT nomde,
-avg(salar) AS "Salario Medio",
+avg(salar) AS "Salario Medio"
 FROM EMPLEADOS E JOIN DEPARTAMENTOS D
-ON E.numde = D.numde 
-GROUP BY E.numde,
+    ON E.numde = D.numde 
+GROUP BY nomde
 HAVING AVG(salar) > (SELECT AVG(salar) FROM EMPLEADOS);
 
 
