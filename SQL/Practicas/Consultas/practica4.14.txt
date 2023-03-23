@@ -69,63 +69,65 @@ HAVING COUNT(NUMEM) IS NULL AND (TIDIR="F" OR TIDIR IS NULL);
 INSERT INTO DEPARTAMENTOS(tidir,nomde) VALUES('F','NUEVO');
 
 /*Ejercicio 9*/
-INSERT INTO EMPLEADOS(numem,nomem) VALUES(33,'NORBERTO');
+INSERT INTO EMPLEADOS(nummem,nomem) VALUES(33,'NORBERTO');
 
 /*Ejercicio 10*/
 SELECT nomde 
 FROM DEPARTAMENTOS D JOIN EMPLEADOS E 
-    ON D.numde = E.numde 
+    ON E.numde = D.numde
 WHERE D.numde NOT IN (SELECT numde FROM EMPLEADOS);
 
 /*Ejercicio 11*/
 SELECT nomde
-FROM EMPLEADOS E LEFT JOIN DEPARTAMENTOS D 
-    ON E.numde = D.numde
-WHERE numem IS NULL;
+FROM DEPARTAMENTOS D LEFT JOIN EMPLEADOS E
+    ON D.numde = E.numde
+WHERE nummem IS NULL;
 
 /*Ejercicio 12*/
  SELECT nomde, nomem 
  FROM EMPLEADOS E RIGHT JOIN DEPARTAMENTOS D
-    ON E.numde = D.numde
+    ON D.numde = E.numde
 WHERE numem IS NULL;
 
 /*Ejercicio 13*/
 SELECT nomem, nomde 
 FROM EMPLEADOS E LEFT JOIN DEPARTAMENTOS D 
-    ON E.numde = D.numde
+    ON D.numde = E.numde
 WHERE E.numde IS NULL;
 
 /*Ejercicio 14*/
 SELECT nomem, nomde 
-FROM DEPARTAMENTOS D RIGHT JOIN EMPLEADOS E 
+FROM EMPLEADOS E RIGHT JOIN DEPARTAMENTOS D
     ON D.numde = E.numde
 WHERE E.numde IS NULL;
 
 /*Ejercicio 15*/
 SELECT nomde, nomem 
 FROM EMPLEADOS E FULL JOIN DEPARTAMENTOS D 
-    ON E.numde = D.numde
+    ON D.numde = E.numde
 WHERE D.nomem IS NULL OR E.numde IS NULL;
 
 /*Ejercicio 16*/
 SELECT nomde, nomem 
-FROM EMPLEADOS E JOIN DEPARTAMENTOS D 
-    ON E.numde = D.numde;
+FROM EMPLEADOS E INNER JOIN DEPARTAMENTOS D 
+    ON D.numde = E.numde;
 
 /*Ejercicio 17*/
 SELECT nomde, nomem
 FROM EMPLEADOS E JOIN DEPARTAMENTOS D 
-    ON E.numde = D.numde 
-WHERE numde IS NULL;
+    ON D.numde = E.numde 
+WHERE E.numde IS NULL;
 
 /*Ejercicio 18*/
 SELECT nomem, nomde 
-FROM EMPLEADOS E NATURAL JOIN DEPARTAMENTOS D 
-    ON E.numde = D.numde 
-WHERE E.numde IS NOT NULL;
+FROM  DEPARTAMENTOS D NATURAL JOIN EMPLEADOS E; 
+
 
 /*Ejercicio 19*/
 SELECT *
 FROM EMPLEADOS E NATURAL JOIN DEPARTAMENTOS D NATURAL JOIN CENTROS C;
 
+/*Ejercicio 20*/
+DELETE FROM DEPARTAMENTOS WHERE numde=190;
+DELETE FROM EMPLEADOS WHERE nummem=33;
 
