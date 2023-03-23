@@ -80,5 +80,48 @@ FROM EMPLEADOS E LEFT JOIN DEPARTAMENTOS D
 WHERE numem IS NULL;
 
 /*Ejercicio 12*/
- 
+ SELECT nomde, nomem 
+ FROM EMPLEADOS E RIGHT JOIN DEPARTAMENTOS D
+    ON E.numde = D.numde
+WHERE numem IS NULL;
+
+/*Ejercicio 13*/
+SELECT nomem, nomde 
+FROM EMPLEADOS E LEFT JOIN DEPARTAMENTOS D 
+    ON E.numde = D.numde
+WHERE E.numde IS NULL;
+
+/*Ejercicio 14*/
+SELECT nomem, nomde 
+FROM DEPARTAMENTOS D RIGHT JOIN EMPLEADOS E 
+    ON D.numde = E.numde
+WHERE E.numde IS NULL;
+
+/*Ejercicio 15*/
+SELECT nomde, nomem 
+FROM EMPLEADOS E FULL JOIN DEPARTAMENTOS D 
+    ON E.numde = D.numde
+WHERE D.nomem IS NULL OR E.numde IS NULL;
+
+/*Ejercicio 16*/
+SELECT nomde, nomem 
+FROM EMPLEADOS E JOIN DEPARTAMENTOS D 
+    ON E.numde = D.numde;
+
+/*Ejercicio 17*/
+SELECT nomde, nomem
+FROM EMPLEADOS E JOIN DEPARTAMENTOS D 
+    ON E.numde = D.numde 
+WHERE numde IS NULL;
+
+/*Ejercicio 18*/
+SELECT nomem, nomde 
+FROM EMPLEADOS E NATURAL JOIN DEPARTAMENTOS D 
+    ON E.numde = D.numde 
+WHERE E.numde IS NOT NULL;
+
+/*Ejercicio 19*/
+SELECT *
+FROM EMPLEADOS E NATURAL JOIN DEPARTAMENTOS D NATURAL JOIN CENTROS C;
+
 
