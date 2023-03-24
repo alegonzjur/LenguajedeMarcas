@@ -1,0 +1,37 @@
+/*Ejercicio 1*/
+CREATE VIEW VISTA1 AS 
+    SELECT nummem AS "Numero empleado",
+    nomem AS "Nombre empleado",
+    salar AS "Salario",
+    comis AS "Comision"
+    FROM EMPLEADOS
+    WHERE numde = 111;
+
+/*Ejercicio 2*/
+CREATE VIEW VISTA2 AS
+    SELECT sum(salar) AS "Salario",
+    numde AS "Nombre departamento"
+    FROM EMPLEADOS
+    GROUP BY numde 
+    HAVING SUM(salar) = (SELECT MAX(SUM(SALAR)) FROM EMPLEADOS GROUP BY numde);
+
+/*Ejercicio 3*/
+SELECT numde FROM VISTA2;
+
+/*Ejercicio 4*/
+SELECT "Nombre empleado"
+FROM VISTA1
+WHERE "Comision" IS NOT NULL
+ORDER BY 1;
+
+/*Ejercicio 7*/
+CREATE VIEW VISTA3 AS (
+    SELECT nomce, D.*
+    FROM DEPARTAMENTOS D, CENTROS C 
+    WHERE C.numce = D.numce
+);   
+
+/*Ejercicio 8*/
+SELECT nomce, sum(presu)
+    FROM VISTA3 
+    GROUP BY nomce;

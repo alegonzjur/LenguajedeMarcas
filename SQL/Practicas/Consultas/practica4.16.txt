@@ -1,0 +1,6 @@
+/*Ejercicio 1*/
+SELECT nomem,
+salar+0.01*salar
+FROM EMPLEADOS
+WHERE numde=100 and (fecin-fecna)/365 > 20
+ORDER BY nomem DESC;
