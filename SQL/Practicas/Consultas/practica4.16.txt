@@ -1,6 +1,61 @@
 /*Ejercicio 1*/
-SELECT nomem,
-salar+0.01*salar
+SELECT nomem, 1.01*salar AS "Salario"
 FROM EMPLEADOS
 WHERE numde=100 and (fecin-fecna)/365 > 20
 ORDER BY nomem DESC;
+
+/*Ejercicio 2*/
+SELECT numce, avg(presu)
+FROM DEPARTAMENTOS
+GROUP BY numce;
+
+/*Ejercicio 3*/
+SELECT nomem, TRUNC((SYSDATE-fecna)/365) AS "Edad"
+FROM EMPLEADOS E JOIN DEPARTAMENTOS D
+ON D.numde = E.numde
+WHERE nomde = 'PERSONAL';
+
+/*Ejercicio 4*/
+SELECT dirce, nomde 
+FROM CENTROS C JOIN DEPARTAMENTOS D ON D.numce = C.numce 
+                JOIN EMPLEADOS E ON D.numde = E.numde
+WHERE numhi > 3;
+
+/*Ejercicio 5*/
+SELECT DISTINCT dirce, nomde 
+FROM CENTROS C JOIN DEPARTAMENTOS D ON D.numce = C.numce 
+                JOIN EMPLEADOS E ON D.numde = E.numde
+WHERE EXISTS (SELECT * FROM EMPLEADOS WHERE numhi>3);
+
+/*Ejercicio 6*/
+SELECT numhi, COUNT(numhi) 
+FROM EMPLEADOS 
+GROUP BY numhi;
+
+/*Ejercicio 7*/
+CREATE VIEW SIN_COMISION AS
+    SELECT nomem AS "Nombre",
+    TRUNC((SYSDATE-fecna)/365) AS "Edad Actual",
+    salar AS "Salario"
+    FROM EMPLEADOS
+    WHERE comis IS NULL;
+
+/*Ejercicio 8*/
+SELECT ROUND(AVG("Salario")) AS "Media Salarios" FROM SIN_COMISION;
+
+/*Ejercicio 9*/
+SELECT nomde, MAX(salar)
+FROM DEPARTAMENTOS D JOIN EMPLEADOS E 
+    ON E.numde = D.numde
+GROUP BY nomde
+HAVING max(salar) <= 2000;
+
+/*Ejercicio 10*/
+CREATE VIEW JUBILACION AS
+    SELECT nomem AS "Nombre empleado", 
+    nomde AS "N. departamento", 
+    TRUNC((SYSDATE-fecin)/365) AS "Edad", 
+    salar AS "Salario"
+    FROM EMPLEADOS E JOIN DEPARTAMENTOS D
+    ON D.numde = E.numde
+    WHERE 'Edad'>=60; 
