@@ -1,0 +1,4 @@
+CREATE TABLE JUGADOR{
+    Nombre VARCHAR2(20),
+    Edad INTEGER
+};
