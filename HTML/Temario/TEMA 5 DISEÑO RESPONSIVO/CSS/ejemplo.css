@@ -1,0 +1,41 @@
+*{
+    box-sizing: border-box;
+}
+.container{
+    margin: 0 auto;
+    width: 90%;
+}
+.container > *{
+    height: 150px;
+}
+header{
+    background-color: yellow;
+    padding-top: 2em;
+    text-align: center;
+}
+.blue{
+    background-color: blue;
+}
+
+.red{
+    background-color: red;
+}
+
+.green{
+    background-color: green;
+}
+
+@media screen and (min-width: 576px) {
+    .red, .blue{
+        float: left;
+        width: 50%;
+    }
+    .green{
+        float: left;
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 992px){
+    
+}
