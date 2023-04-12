@@ -1,0 +1,30 @@
+CREATE TABLE Empleado(
+    ID INT PRIMARY KEY,
+    DNI CHAR(9) UNIQUE,
+    Nombre VARCHAR2(40),
+    Salario NUMBER(10),
+    IdDep INT
+);
+
+CREATE TABLE Departamento(
+    ID INT PRIMARY KEY,
+    Nombre VARCHAR2(40),
+    Ubicacion VARCHAR2(40)
+);
+
+CREATE TABLE Jefe(
+    ID INT PRIMARY KEY,
+    DNI CHAR(9) UNIQUE,
+    Nombre VARCHAR2(40),
+    Salario NUMBER(10),
+    Telefono CHAR(9),
+    IdDep INT UNIQUE
+);
+
+ALTER TABLE Empleado ADD(
+    CONSTRAINT FK_Emp FOREIGN KEY (IdDep) REFERENCES Departamento(ID)
+);
+
+ALTER TABLE Jefe ADD(
+    CONSTRAINT FK_Jef FOREIGN KEY (IdDep) REFERENCES Departamento(ID)
+);

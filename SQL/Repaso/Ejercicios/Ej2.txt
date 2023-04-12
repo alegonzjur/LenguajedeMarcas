@@ -1,0 +1,38 @@
+CREATE TABLE Empleado(
+    Id INT PRIMARY KEY,
+    DNI CHAR(9) UNIQUE,
+    Nombre VARCHAR2(40),
+    FechaNac DATE,
+    Telefono CHAR(9),
+    Salario NUMBER(10),
+    CodLocalidad INT
+);
+
+CREATE TABLE Localidad(
+    CodLocalidad INT PRIMARY KEY,
+    Nombre VARCHAR2(40),
+    CodProvincia INT
+);
+
+CREATE TABLE Provincia(
+    CodProvincia INT PRIMARY KEY,
+    Nombre VARCHAR2(40),
+    CodRegion INT
+);
+
+CREATE TABLE Region(
+    CodRegion INT PRIMARY KEY,
+    Nombre VARCHAR2(40)
+);
+
+ALTER TABLE Empleado ADD(
+    CONSTRAINT FK_emp FOREIGN KEY (CodLocalidad) REFERENCES Localidad(CodLocalidad)
+);
+
+ALTER TABLE Localidad ADD(
+    CONSTRAINT FK_loc FOREIGN KEY (CodProvincia) REFERENCES Provincia(CodProvincia)
+);
+
+ALTER TABLE Provincia ADD(
+    CONSTRAINT FK_prov FOREIGN KEY (CodRegion) REFERENCES Region(CodRegion)
+);
