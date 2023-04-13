@@ -1,0 +1,36 @@
+CREATE TABLE Alumno(
+    NumMatricula INT PRIMARY KEY,
+    Nombre VARCHAR2(40),
+    FechaNacimiento DATE,
+    Telefono CHAR(9)
+);
+
+CREATE TABLE Asignatura(
+    CodAsignatura INT PRIMARY KEY,
+    Nombre VARCHAR2(40),
+    IdProfesor INT
+);
+
+CREATE TABLE Profesor(
+    IdProfesor INT PRIMARY KEY,
+    NIF_P CHAR(9) UNIQUE,
+    Nombre VARCHAR2(40),
+    Especialidad VARCHAR2(40),
+    Telefono CHAR(9)
+);
+
+ALTER TABLE Asignatura ADD(
+    CONSTRAINT FK_asi FOREIGN KEY (IdProfesor) REFERENCES Profesor(IdProfesor)
+);
+
+CREATE TABLE recibe(
+    NumMatricula INT,
+    CodAsignatura INT,
+    CursoEscolar INT
+);
+
+ALTER TABLE recibe ADD(
+    CONSTRAINT PK_rec PRIMARY KEY (NumMatricula,CodAsignatura,CursoEscolar),
+    CONSTRAINT FK1_rec FOREIGN KEY (NumMatricula) REFERENCES Alumno(NumMatricula),
+    CONSTRAINT FK2_rec FOREIGN KEY (CodAsignatura) REFERENCES Asignatura(CodAsignatura)
+);
