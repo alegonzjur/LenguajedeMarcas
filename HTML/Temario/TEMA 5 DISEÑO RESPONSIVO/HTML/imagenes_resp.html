@@ -5,10 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="../CSS/imag_resp.css">
+    
 </head>
 <body>
     <div class="container">
-        <img src="../Imágenes/gato.jpg" srcset="">
+        <div class="art">
+            <picture>
+                <source media="(min-width: 992px)" srcset="../Imágenes/gato.jpg">
+                <source media="(min-width: 576px)" srcset="../Imágenes/p1.jpg">
+                <source media="(max-width: 575px)" srcset="../Imágenes/shur_s.png">
+                <img src="../Imágenes/huron.jpg" >
+            </picture>
+        </div>
+        <div class="rojo"></div>
+        <div class="azul"></div>
     </div>
 </body>
 </html>

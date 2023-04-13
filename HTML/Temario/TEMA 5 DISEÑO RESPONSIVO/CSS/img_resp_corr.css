@@ -1,0 +1,40 @@
+*{
+    box-sizing: border-box;
+}
+
+.container{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.container>div{
+    height: 100px;
+    width: 100%;
+}
+
+img{
+    width: 100%;
+    height: 100px;
+}
+
+#rojo{
+    background-color: red;
+}
+
+#verde{
+    background-color: green;
+}
+
+@media screen and (min-width:576px){
+    #imagen,#rojo{
+        width: 50%;
+    }
+}
+
+@media screen and (min-width:992px) {
+    #imagen, #rojo, #verde{
+        width: 33%;
+    }
+}
