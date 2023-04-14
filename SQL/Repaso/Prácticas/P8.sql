@@ -1,0 +1,23 @@
+/*Ejercicio 1*/
+SELECT nomce 
+FROM CENTROS 
+WHERE EXISTS (SELECT * FROM CENTROS WHERE dirce LIKE '%ATOCHA%')
+ORDER BY 1 ASC;
+
+/*Ejercicio 2*/
+SELECT nomem, salar
+FROM EMPLEADOS
+WHERE numde=100 AND
+    EXISTS (SELECT * FROM EMPLEADOS WHERE numde=100 AND salar>1300);
+
+/*Ejercicio 3*/
+SELECT nomem, salar
+FROM EMPLEADOS
+WHERE numde=100 AND 
+    EXISTS (SELECT * FROM EMPLEADOS WHERE numde=100 AND salar>2750);
+
+/*Ejercicio 4*/
+SELECT nomem, salar 
+FROM EMPLEADOS
+WHERE numde=100 AND 
+    EXISTS (SELECT * FROM EMPLEADOS WHERE numde=100 AND salar>3000);

@@ -1,0 +1,18 @@
+/*Ejercicio 1*/
+SELECT nomem
+FROM EMPLEADOS
+WHERE extel IN (250,750)
+ORDER BY 1 ASC;
+
+/*Ejercicio 2*/
+SELECT nomem
+FROM EMPLEADOS
+WHERE numde IN (SELECT numde FROM EMPLEADOS WHERE nomem IN ('PILAR','DOROTEA'))
+ORDER BY 1 ASC;
+
+/*Ejercicio 3*/
+SELECT nomde AS "Nombre Dep.",
+direc AS "Ident. direc"
+FROM DEPARTAMENTOS
+WHERE direc IN (SELECT direc FROM DEPARTAMENTOS WHERE nomde='DIRECC.COMERCIAL' OR nomde='PERSONAL')
+ORDER BY 1 ASC;
