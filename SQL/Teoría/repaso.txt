@@ -3,3 +3,8 @@ Practicas -> Pag 179 / Pag 256
 
 
 Para borrar en cascada, borramos la constraint y la ponemos de nuevo
+
+
+SAVEPOINT "NOMBRE"
+
+ROLLBACK TO "NOMBRE"
