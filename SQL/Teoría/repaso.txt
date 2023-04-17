@@ -1,2 +1,5 @@
 Ejercicios -> Pag 135 / Pag 181
 Practicas -> Pag 179 / Pag 256
+
+
+Para borrar en cascada, borramos la constraint y la ponemos de nuevo
