@@ -34,4 +34,4 @@ CREATE VIEW VISTA3 AS
     WHERE C.numce = D.numce;
 
 /*Ejercicio 8*/
-S
+
