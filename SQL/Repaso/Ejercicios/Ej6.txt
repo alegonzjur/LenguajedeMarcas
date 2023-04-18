@@ -1,0 +1,63 @@
+CREATE TABLE Empleado(
+    DNI CHAR(9) PRIMARY KEY,
+    Nombre VARCHAR2(50) NOT NULL,
+    Direccion VARCHAR2(50),
+    Telefono CHAR(9),
+    Sucursal INT
+);
+
+CREATE TABLE Sucursal(
+    Codigo INT PRIMARY KEY,
+    Direccion VARCHAR2(50),
+    Telefono CHAR(9)
+);
+
+CREATE TABLE Revista(
+    NumReg INT PRIMARY KEY,
+    Titulo VARCHAR2(50) NOT NULL,
+    Periodicidad VARCHAR2(50) DEFAULT 'MENSUAL',
+    Tipo VARCHAR2(50),
+    Sucursal INT
+);
+
+CREATE TABLE NumRevista(
+    NumReg INT,
+    Numero INT,
+    NumPaginas INT,
+    Fecha DATE,
+    CantVendidas INT
+);
+
+CREATE TABLE escribe(
+    NumReg INT,
+    DNI_Per CHAR(9)
+);
+
+CREATE TABLE Periodista(
+    DNI CHAR(9) PRIMARY KEY,
+    Nombre VARCHAR2(50) NOT NULL,
+    Direccion VARCHAR2(50),
+    Telefono CHAR(9),
+    Especialista VARCHAR2(50)
+);
+
+ALTER TABLE Empleado ADD(
+    CONSTRAINT FK_Emp FOREIGN KEY (Sucursal) REFERENCES Sucursal(Codigo)
+);
+
+ALTER TABLE Revista ADD(
+    CONSTRAINT FK_Rev FOREIGN KEY (Sucursal) REFERENCES Sucursal(Codigo),
+    CONSTRAINT CH_Rev CHECK (Periodicidad IN ('SEMANAL','QUINCENAL','MENSUAL','TRIMESTRAL','ANUAL'))
+);
+
+ALTER TABLE NumRevista ADD(
+    CONSTRAINT PK_Num PRIMARY KEY (NumReg,Numero),
+    CONSTRAINT FK_num FOREIGN KEY (NumReg) REFERENCES Revista(NumReg),
+    CONSTRAINT CH_numpag CHECK (NumPaginas>0)
+);
+
+ALTER TABLE escribe ADD(
+    CONSTRAINT PK_esc PRIMARY KEY (NumReg,DNI_Per),
+    CONSTRAINT FK1_esc FOREIGN KEY (NumReg) REFERENCES Revista(NumReg),
+    CONSTRAINT FK2_esc FOREIGN KEY (DNI_Per) REFERENCES Periodista(DNI)  
+);

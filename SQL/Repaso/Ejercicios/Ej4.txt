@@ -1,0 +1,41 @@
+CREATE TABLE Cliente(
+    NIF CHAR(9) PRIMARY KEY,
+    Nombre VARCHAR2(50),
+    Direccion VARCHAR2(50),
+    Telefono CHAR(9)
+);
+
+CREATE TABLE ModeloDormitorio(
+    Cod INT PRIMARY KEY
+);
+
+CREATE TABLE MONTADOR(
+    NIF CHAR(9) PRIMARY KEY,
+    Nombre VARCHAR2(50),
+    Direccion VARCHAR2(50),
+    Telefono CHAR(9)
+);
+
+CREATE TABLE compra(
+    NIF_C CHAR(9),
+    Modelo INT,
+    FechaCompra DATE
+);
+
+CREATE TABLE monta(
+    Modelo INT,
+    NIF_M CHAR(9),
+    FechaMontaje DATE
+);
+
+ALTER TABLE compra ADD(
+    CONSTRAINT PK_com PRIMARY KEY (NIF_C,Modelo,FechaCompra),
+    CONSTRAINT FK1_com FOREIGN KEY (NIF_C) REFERENCES Cliente(NIF),
+    CONSTRAINT FK2_com FOREIGN KEY (Modelo) REFERENCES ModeloDormitorio(Cod)
+);
+
+ALTER TABLE monta ADD(
+    CONSTRAINT PK_mon PRIMARY KEY (Modelo,NIF_M,FechaMontaje),
+    CONSTRAINT FK1_mon FOREIGN KEY (Modelo) REFERENCES ModeloDormitorio(Cod),
+    CONSTRAINT FK2_mon FOREIGN KEY (NIF_M) REFERENCES Montador(NIF)
+);
