@@ -1,1 +1,61 @@
-CREATE TABLE 
+CREATE TABLE Sucursal(
+    CodSucursal INT PRIMARY KEY,
+    Nombre VARCHAR2(50),
+    Direccion VARCHAR2(50),
+    Localidad VARCHAR2(50)
+);
+
+CREATE TABLE Cliente(
+    DNI CHAR(9) PRIMARY KEY,
+    Nombre VARCHAR2(50),
+    Direccion VARCHAR2(50),
+    Localidad VARCHAR2(50),
+    FechaNac DATE,
+    Sexo CHAR(1)
+);
+
+CREATE TABLE Cuenta(
+    CodSucursal INT,
+    CodCuenta INT
+);
+
+CREATE TABLE Cli-Cuenta(
+    CodSucursal INT,
+    CodCuenta INT,
+    DNI CHAR(9)
+);
+
+CREATE TABLE Transaccion(
+    CodSucursal INT,
+    CodCuenta INT,
+    NumTransaccion INT,
+    Fecha DATE,
+    Cantidad NUMBER(6),
+    Tipo VARCHAR2(50)
+);
+
+ALTER TABLE Cuenta ADD(
+    CONSTRAINT PK_cue PRIMARY KEY (CodSucursal,CodCuenta),
+    CONSTRAINT FK_cue FOREIGN KEY (CodSucursal) REFERENCES Sucursal(CodSucursal)
+);
+
+ALTER TABLE Cli-Cuenta ADD(
+    CONSTRAINT PK_cli PRIMARY KEY (CodSucursal,CodCuenta,DNI),
+    CONSTRAINT FK1_cli FOREIGN KEY (CodSucursal,CodCuenta) REFERENCES Cuenta(CodSucursal,CodCuenta),
+    CONSTRAINT FK2_cli FOREIGN KEY (DNI) REFERENCES Cliente(DNI)
+ );
+
+ ALTER TABLE Transaccion ADD(
+    CONSTRAINT PK_Tra PRIMARY KEY (CodSucursal,CodCuenta,NumTransaccion),
+    CONSTRAINT FK_Tra FOREIGN KEY (CodSucursal,CodCuenta) REFERENCES Cuenta(CodSucursal,CodCuenta)
+ );
+
+ CREATE SEQUENCE CodSucursal(
+    START WITH 1
+    INCREMENT BY 1
+ );
+
+ CREATE INDEX NOMBRE_CLIENTE_IDX ON Cliente(Nombre);
+ CREATE INDEX LOCALIDAD_CLIENTE_IDX ON Cliente(Localidad);
+ CREATE INDEX NOMBRE_SUCURSAL_IDX ON Sucursal(Nombre);
+ CREATE INDEX LOCALIDAD_SUCURSAL_IDX ON Sucursal(Localidad);
