@@ -1,0 +1,47 @@
+CREATE TABLE Vivienda(
+    ID INT PRIMARY KEY,
+    TipoVia VARCHAR2(50) DEFAULT 'Calle',
+    NombreVia VARCHAR2(50) NOT NULL,
+    Numero INT NOT NULL,
+    IDMunicipio INT
+);
+
+CREATE TABLE Municipio(
+    ID INT PRIMARY KEY,
+    Nombre VARCHAR2(50) NOT NULL,
+    CodPostal CHAR(5),
+    Provincia VARCHAR2(50)
+);
+
+CREATE TABLE Persona(
+    DNI CHAR(9) PRIMARY KEY,
+    Nombre VARCHAR2(50) NOT NULL,
+    FechaNac DATE,
+    Sexo CHAR(1),
+    IDVivienda INT
+);
+
+CREATE TABLE posee(
+    DNI CHAR(9),
+    IDVivienda INT
+);
+
+CREATE TABLE cabezaFamilia(
+    DNI CHAR(9) PRIMARY KEY,
+    IDVivienda INT UNIQUE
+);
+
+ALTER TABLE Vivienda ADD(
+    CONSTRAINT FK_viv FOREIGN KEY (IDMunicipio) REFERENCES Municipio(ID)
+);
+
+ALTER TABLE Persona ADD(
+    CONSTRAINT FK_per FOREIGN KEY (IDVivienda) REFERENCES Vivienda(ID),
+    CONSTRAINT CH_per CHECK (Sexo IN ('H','M'))
+);  
+
+ALTER TABLE posee ADD(
+    CONSTRAINT PK_pos PRIMARY KEY (DNI,IDVivienda),
+    CONSTRAINT FK1_pos FOREIGN KEY (DNI) REFERENCES Persona(DNI),
+    CONSTRAINT FK2_pos FOREIGN KEY (IDVivienda) REFERENCES Vivienda(ID)
+);
