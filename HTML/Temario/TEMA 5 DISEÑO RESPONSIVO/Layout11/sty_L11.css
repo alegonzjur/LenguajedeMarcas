@@ -5,9 +5,7 @@
 .container{
     width: 90%;
     margin: 0 auto;
-    display: flex;
     overflow-y: auto;
-    flex: wrap;
 }
 
 header{
@@ -28,3 +26,24 @@ main{
     background-color: rgb(228, 228, 207);
 }
 
+main nav{
+    width: 100%;
+    float: left;
+    text-align: center;
+}
+main nav h1{
+    font-size: 3em;
+}
+
+main nav h2{
+    font-size: 1.25em;
+}
+main article{
+    width: 35%;
+    margin-left: 30px;
+    float: left;
+}
+footer{
+    width: 100%;
+    height: 200px;
+}
