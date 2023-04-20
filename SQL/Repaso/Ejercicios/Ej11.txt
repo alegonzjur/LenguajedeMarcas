@@ -77,8 +77,7 @@ CREATE INDEX NomCli_IND ON Cliente(Nombre);
 CREATE INDEX NomCat_IND ON Categoria(Nombre);
 CREATE INDEX NomPro_IND ON Proveedor(Nombre);
 CREATE INDEX CiuCli_IND ON Cliente(Ciudad);
-CREATE SEQUENCE IdVenta(
+CREATE SEQUENCE IdVenta
     INCREMENT BY 1
     START WITH 1
-    NOXMAXVALUE
-);
+    NOXMAXVALUE;
