@@ -1,0 +1,94 @@
+CREATE TABLE Cliente(
+    NumCliente INT PRIMARY KEY,
+    Saldo NUMBER(5),
+    LimCredito NUMBER(5),
+    Descuento NUMBER(5)
+);
+
+CREATE SEQUENCE NumCliente(
+    INCREMENT BY 1
+    START WITH 1
+);
+
+CREATE TABLE posee(
+    NumCliente INT,
+    CodDireccion INT
+);
+
+CREATE TABLE Direccion(
+    CodDireccion INT PRIMARY KEY,
+    Via VARCHAR2(50),
+    NombreVia VARCHAR2(50),
+    Numero INT,
+    Piso INT,
+    Portal INT,
+    CodPostal CHAR(5)
+);
+
+CREATE TABLE Pedido(
+    NumPedido INT PRIMARY KEY,
+    Fecha DATE,
+    NumCliente INT,
+    CodDireccion INT
+);
+
+CREATE SEQUENCE NumPedido(
+    INCREMENT BY 1
+    START WITH 1
+);
+
+CREATE TABLE Articulo(
+    NumArticulo INT PRIMARY KEY,
+    Descripcion VARCHAR2(50)
+);
+
+CREATE SEQUENCE NumArticulo(
+    INCREMENT BY 1
+    START WITH 1
+);
+
+CREATE TABLE incluye(
+    NumPedido INT,
+    NumArticulo INT,
+    Cantidad INT
+);
+
+CREATE TABLE distribuye{
+    NumArticulo INT,
+    NumFabrica INT,
+    CantSuministro INT,
+    Existencias INT
+}
+
+CREATE TABLE Fabrica(
+    NumFabrica INT PRIMARY KEY,
+    Telefono CHAR(9)
+);
+
+CREATE SEQUENCE NumFabrica(
+    INCREMENT BY 1
+    START WITH 1 
+);
+
+ALTER TABLE posee ADD(
+    CONSTRAINT PK_pos PRIMARY KEY (NumCliente,CodDireccion),
+    CONSTRAINT FK_pos FOREIGN KEY (NumCliente) REFERENCES Cliente(NumCliente)
+    CONSTRAINT FK1_pos FOREIGN KEY (CodDireccion) REFERENCES Direccion(CodDireccion)
+);
+
+ALTER TABLE Pedido ADD(
+    CONSTRAINT FK1_ped FOREIGN KEY (NumCliente) REFERENCES Cliente(NumCliente),
+    CONSTRAINT FK2_ped FOREIGN KEY (CodDireccion) REFERENCES Direccion(CodDireccion)
+);
+
+ALTER TABLE incluye ADD(
+    CONSTRAINT Pk_inc PRIMARY KEY (NumPedido,NumArticulo),
+    CONSTRAINT FK1_inc FOREIGN KEY (NumPedido) REFERENCES Pedido(NumPedido),
+    CONSTRAINT FK2_inc FOREIGN KEY (NumArticulo) REFERENCES Articulo(NumArticulo)
+);
+
+ALTER TABLE distribuye ADD(
+    CONSTRAINT PK_dis PRIMARY KEY (NumArticulo,NumFabrica),
+    CONSTRAINT FK1_dis FOREIGN KEY (NumArticulo) REFERENCES Articulo(NumArticulo),
+    CONSTRAINT FK2_dis FOREIGN KEY (NumArticulo) REFERENCES Fabrica(NumFabrica)
+);
