@@ -1,45 +1,136 @@
 *{
     box-sizing: border-box;
+    font-family: righteous;
 }
 
+h1{
+    margin: 0;
+    padding: 0;
+}
+.verde{
+    color: green;
+}
 .container{
-    width: 90%;
+    width: 95%;
     margin: 0 auto;
 }
-
+/*Header*/
 header{
     width: 100%;
     overflow-y: auto;
     color: green;
-}
+    display: flex;
+    justify-content: space-between;
 
+}
+.menu_item{
+    display: none;
+}
 header h1{
-    font-size: 3em;
-    float: left;
-    width: 60%;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-
-header nav{
-    float: left;
-    width: 40%;
+    font-size: 2.5em; 
+    width: 70%;
+    font-family: righteous;
 }
 
 header nav div{
     width: 20%;
-    display: inline-block;
-    font-size: 1.5em;
-    text-align: right;
-}
-
-
-
-@media screen and (max-width: 576px){
+    padding-top: 15px;
+    margin-right: 15px;
+    
     
 }
 
-@media screen and (max-width: 992px){
+/*Main*/
+
+main{
+    width: 100%;
+    overflow-y: auto;
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.main_text{
+    background-color: rgb(54, 53, 53);
+    color: white;
+    height: 300px;
+    width: 100%;
     
+}
+.main_text:first-child{
+    padding: 30px;
+    padding-top: 15px;
+    padding-bottom: 30px;
+}
+
+.images{
+    width: 100%;
+    height: 250px;
+}
+.hidden{
+    display: none;
+}
+.images img{
+    width: 24%;
+    margin: 0;
+}
+
+/*Novedades*/
+.novedades{
+    margin-top: 20px;
+    width: 100%;
+    overflow-y: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+@media screen and (min-width: 576px){
+    /*Header*/
+    .icon{
+        display: none;
+    }
+    .menu_item{
+        display: inline-block;
+        padding-top:15px;
+    }
+    /*Main*/
+    main{
+        overflow-y: auto;
+        padding: 5px;
+    
+    }
+    .main_text{
+        width: 52%;
+        height: 100%;
+    }
+    .main_text p{
+        font-size: 0.9em;
+    }
+    .main_text h3{
+        font-size: 0.9em;
+    }
+    .main_text h1{
+        font-size: 1em;
+    }
+    .images{
+        width: 48%;
+        flex-direction: row;
+        height: 100%;
+    }
+    .images img{
+        width: 40%;
+    }
+    /*Novedades*/
+    .novedades{
+        width: 100%;
+        display: grid;
+        grid-template-columns: 24% 24% 24% 24%;
+        grid-template-rows: 50% 50%;
+        column-gap: 5px;
+        font-size: 0.8em;
+    }
+     .novedades .verde{
+        font-size: 1.5em;
+     }
 }
 
 @media screen and (min-width:992px){
