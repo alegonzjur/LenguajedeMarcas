@@ -51,20 +51,104 @@ main div p{
   
 }
 /*Formulario*/
-main section{
-    width: 60%;
-    text-align: center;
+section{
+    width: 45%;
     margin: 0 auto;
-    background-color: rgb(228, 228, 207);
+    overflow-y: auto;
+    text-align: center;
+    background-color: rgb(242, 242, 242);
+    margin-bottom: 20px;
 }
 
-main form{
-    display: inline-block;
+form h3{
+    text-align: center;
+}
+main form article{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+main form article label{
+    width: 60%;
+    margin-left: 10px;
+    height: 30px;
+    padding-top: 8px;
+}
+main form article input{
+    width: 60%;
+    height: 30px;
+    margin: 0 auto;
+}
+#AI{
+    width: 60%;
+    margin-left: 10px;
+    height: 30px;
+    padding-top: 8px;
+}
+main form article select{
+    width: 60%;
+    margin: 0 auto;
+    height: 30px;
+}
+form button{
+    background-color: rgb(201, 45, 178);
+    color: white;
+    width: 60%;
+    margin-top: 10px;
+    height: 50px;
+    font-family: 'Times New Roman', Times, serif;
+    margin-bottom: 10px;
+}
+main form fieldset{
+    width: 60%;
+    height: 80px;
+    margin: 0 auto;
 }
 
 
 /*Footer*/
 footer{
     width: 100%;
-    height: 200px;
+    overflow-y: auto;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+footer figure{
+    width: 70%;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+figure p{
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+footer img{
+    width: 30%;
+    margin-left: 310px;
+    
+}
+
+/*Modificación de pantalla*/
+
+
+/*Para tablets*/
+@media screen and (min-width: 576px) {
+    footer{
+        display: grid;
+        grid-template-columns: 30% 30% 30%;
+        grid-template-rows: 50% 50%;
+    }
+    footer img{
+        grid-column: 1/2;
+        margin: 0 auto;
+        margin-left: 80px;
+
+    }
+}
+/*Para PCs*/
+@media screen and (min-width: 992px){
+    
 }
