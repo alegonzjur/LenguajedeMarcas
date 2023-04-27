@@ -98,9 +98,12 @@ main{
         padding: 5px;
     
     }
+    p{
+        font-size: 0.9em;
+    }
     .main_text{
         width: 52%;
-        height: 100%;
+        height: 400px;
     }
     .main_text p{
         font-size: 0.9em;
@@ -114,7 +117,7 @@ main{
     .images{
         width: 48%;
         flex-direction: row;
-        height: 100%;
+        height: 400px;
     }
     .images img{
         width: 40%;
@@ -134,5 +137,25 @@ main{
 }
 
 @media screen and (min-width:992px){
-
+    /*Main*/
+    .hidden{
+        display: block;
+    }
+    main{
+        flex-direction:row-reverse;
+        width: 100%;
+    }
+    .main_text{
+        width: 50%;
+    }
+    .images{
+        width: 50%;
+    }
+    .images img{
+        width: 30%;
+        display: inline-block;
+    }
+    p{
+        font-size: 1em;
+    }
 }
