@@ -1,0 +1,83 @@
+CREATE TABLE Cliente(
+    CodCliente INT PRIMARY KEY,
+    Nombre VARCHAR2(50),
+    Calle VARCHAR2(50),
+    Numero INT,
+    Comuna VARCHAR2(50),
+    Ciudad VARCHAR2(50)
+);
+
+CREATE TABLE Venta(
+    IdVenta INT PRIMARY KEY,
+    MontoTotal INT,
+    CodCliente INT
+);
+
+CREATE TABLE Telefono(
+    Numero CHAR(9) PRIMARY KEY
+);
+
+CREATE TABLE Producto(
+    IdProducto INT PRIMARY KEY,
+    Nombre VARCHAR2(50),
+    Precio NUMBER(5),
+    Stock INT,
+    IdCategoria INT,
+    IdProveedor INT
+);
+
+CREATE TABLE Categoria(
+    IdCategoria INT PRIMARY KEY,
+    Nombre VARCHAR2(50),
+    Descripcion VARCHAR2(50)
+);
+
+CREATE TABLE Proveedor(
+    CodProveedor INT PRIMARY KEY,
+    Nombre VARCHAR2(50),
+    Direccion VARCHAR2(50),
+    Telefono CHAR(9),
+    Web VARCHAR2(50)
+);
+
+CREATE TABLE asociado(
+    CodCliente INT,
+    NumTelefono CHAR(9)
+);
+
+CREATE TABLE incluye(
+    IdVenta INT,
+    IdProducto INT,
+    Cantidad INT,
+    PrecioVenta NUMBER(5)
+);
+
+ALTER TABLE Cliente ADD(
+    CONSTRAINT FK_cli FOREIGN KEY (CodCliente) REFERENCES Cliente(CodCliente)
+);
+
+ALTER TABLE Producto ADD(
+    CONSTRAINT FK_pro FOREIGN KEY (IdCategoria) REFERENCES Categoria(IdCategoria),
+    CONSTRAINT FK1_pro FOREIGN KEY (IdProveedor) REFERENCES Proveedor(IdProveedor)
+);
+
+ALTER TABLE asociado ADD(
+    CONSTRAINT PK_aso PRIMARY KEY (CodCliente,NumTelefono),
+    CONSTRAINT FK_aso FOREIGN KEY (CodCliente) REFERENCES Cliente(CodCliente),
+    CONSTRAINT FK1_aso FOREIGN KEY (NumTelefono) REFERENCES Telefono(Numero)
+);
+
+ALTER TABLE incluye ADD(
+    CONSTRAINT PK_inc PRIMARY KEY (IdVenta,IdProducto),
+    CONSTRAINT FK_inc FOREIGN KEY (IdVenta) REFERENCES Venta(IdVenta),
+    CONSTRAINT FK1_inc FOREIGN KEY (IdProducto) REFERENCES Producto(IdProducto)
+);
+
+CREATE INDEX NomCli_IND ON Cliente(Nombre);
+CREATE INDEX NomCat_IND ON Categoria(Nombre);
+CREATE INDEX NomPro_IND ON Proveedor(Nombre);
+CREATE INDEX CiuCli_IND ON Cliente(Ciudad);
+CREATE SEQUENCE IdVenta
+    INCREMENT BY 1
+    START WITH 1
+    NOXMAXVALUE;
