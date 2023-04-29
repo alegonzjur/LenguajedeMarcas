@@ -44,6 +44,9 @@ main div{
     margin: 0 auto;
     text-align: center;
 }
+main div img{
+    width: 90%;
+}
 main div p{
     font-size: 1.1em;
     font-family:'Times New Roman', Times, serif;
@@ -119,15 +122,17 @@ footer figure{
     width: 70%;
     margin: 0 auto;
     margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 figure p{
-    width: 50%;
+    width: 51%;
     margin: 0 auto;
     margin-top: 10px;
 }
 footer img{
-    width: 30%;
-    margin-left: 310px;
+    width: 50%;
     
 }
 
@@ -136,19 +141,44 @@ footer img{
 
 /*Para tablets*/
 @media screen and (min-width: 576px) {
-    footer{
-        display: grid;
-        grid-template-columns: 30% 30% 30%;
-        grid-template-rows: 50% 50%;
+    /*Footer*/
+    footer figure{
+        flex-wrap: nowrap;
     }
-    footer img{
-        grid-column: 1/2;
-        margin: 0 auto;
-        margin-left: 80px;
-
+    figure img{
+        width: 40%;
+    }
+    /*Formulario*/
+    section{
+        width: 80%;
     }
 }
 /*Para PCs*/
 @media screen and (min-width: 992px){
-    
+    /*Parte central-izquierda*/
+    main div{
+        width: 55%;
+
+    }
+    main div img{
+        width: 90%;
+    }
+    /*Parte central-derecha*/
+    main section{
+        width: 40%;
+        margin-right: 0;
+    }
+    /*Footer*/
+    footer figure{
+        width: 30%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    footer figure img{
+        width: 51%;
+    }
+    footer figure p{
+        width: 50%;
+    }
 }
