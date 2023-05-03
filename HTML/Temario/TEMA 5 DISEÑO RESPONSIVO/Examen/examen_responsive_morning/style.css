@@ -1,0 +1,234 @@
+*{
+    box-sizing: border-box;
+}
+h1, h3{
+    padding: 0;
+    text-align: center;
+    width: 100%;
+}
+
+
+/*Container*/
+.container{
+    width: 95%;
+    margin: 0 auto;
+}
+
+/*Header*/
+header{
+    width: 100%;
+    margin: 0 auto;
+    overflow-y: auto;
+    display: flex;
+    background-color: black;
+    color: white;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+    
+}
+header img{
+    width: 15%;
+    
+}
+header nav{
+    display: none;
+}
+header i{
+    width: 15%;
+    padding-top: 10px;
+    text-align: right;
+    padding-right: 10px;
+    
+}
+
+
+
+/*Main*/
+main{
+    width: 100%;
+    margin: 0 auto;
+    overflow-y: auto;
+    text-align: center;
+    color: white;
+    background-color: rgb(65, 62, 62);
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.hidden{
+    display: none;
+}
+main section:first-child{
+    width: 75%;
+    margin: 0 auto;
+}
+main section:nth-child(2){
+    width: 75%;
+    margin: 0 auto;
+}
+main section form button{
+    width: 50%;
+    background-color: green;
+    margin: 0 auto;
+    height: 50px;
+    border-radius: 5px solid black;
+    color: white;
+    margin-bottom: 30px;
+}
+
+/*Sección para equipos*/
+.team{
+    width: 100%;
+    margin: 0 auto;
+    overflow-y: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+.team p{
+    font-size: 1.1em;
+    text-align: center;
+}
+.sign_t{
+    width: 50%;
+    margin: 0 auto;
+    height: 50px;
+    border: 1px solid blue;
+    padding-top: 10px;
+    text-align: center;
+
+}
+/*Footer*/
+.footer{
+    width: 100%;
+    margin: 0 auto;
+    overflow-y: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.imagen{
+    width: 20%;
+    margin: 0 auto;
+    margin-top: 20px;
+    justify-content: center;
+}
+
+.texto{
+    width: 100%;
+    overflow-y: auto;
+    margin: 0 auto;
+}
+
+/*Modificaciones para tablets (más de 576px)*/
+@media screen and (min-width:576px) {
+    /*Header*/
+    header img{
+        width: 12%;
+    }
+    header i{
+        width: 15%;
+        padding-top: 20px;
+        text-align: right;
+        padding-right: 20px;
+    }
+    /*Main*/
+    main section:nth-child(2){
+        background-color: white;
+        overflow-y: auto;
+        color: black;
+        margin-bottom: 30px;
+        width: 90%;
+        display: flex;
+    }
+    .hidden{
+        display: block;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+    input{
+        width: 95%;
+        margin: 0 auto;
+    }
+    label{
+        width: 95%;
+        text-align: left;
+        margin: 0 auto;
+        margin-left: 10px;
+    }
+    main section form button{
+        width: 90%;
+        height: 40px;
+    }
+}
+/*Modificaciones para pantallas de ordenador (más de 992px)*/
+@media screen and (min-width:992px) {
+    /*Header*/
+    header{
+        justify-content: center;
+    }
+    .fa{
+        display: none;
+    }
+    header nav{
+        display: block;
+        width: 85%;
+    }
+    ul{
+        list-style-type: none;
+        
+    }
+    li{
+        display: inline-block;
+        width: 17%;
+        font-size: 1.2em;
+        padding-top: 20px;
+    }
+    /*Main*/
+    main{
+        flex-direction: row-reverse;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+    }
+    main section:first-child{
+        width: 45%;
+        margin-top: 40px;
+    }
+    main section:nth-child(2){
+        width: 45%;
+        margin-top: 20px;
+    }
+    /*Teams*/
+    .team{
+        width: 95%;
+        margin-top: 10px;
+    }
+    h1{
+        font-size: 1.2em;
+        margin: 0;
+    }
+    h3{
+        font-size: 1.05em;
+        margin: 10px;
+    }
+    /*Footer*/
+    .footer{
+        flex-wrap: nowrap;
+    }
+    .imagen{
+        width: 40%;
+        margin: 0 auto;
+    }
+    .texto{
+        width: 55%;
+        justify-content: space-between;
+        display: flex;
+        margin: 0 auto;
+        flex-wrap: wrap;
+    }
+    .texto div{
+        width: 40%;
+        margin: 0 auto;
+        text-align: left;
+    } 
+}
