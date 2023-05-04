@@ -1,0 +1,22 @@
+*{
+    box-sizing: border-box;
+}
+
+#verde{
+    background-color: lightgreen;
+    color: black;
+    text-align: center;
+    font-size: 2em;
+}
+div.row div{
+    height: 100px;
+}
+.red{
+    background-color: red;
+}
+.blue{
+    background-color: blue;
+}
+.green{
+    background-color: green;
+}
