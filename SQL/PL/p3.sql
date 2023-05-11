@@ -1,0 +1,8 @@
+BEGIN
+IF 10 > 5 THEN
+	DBMS_OUTPUT.PUT_LINE ('Cierto');
+ELSE
+	DBMS_OUTPUT.PUT_LINE ('Falso');
+END IF;
+END;
+/
