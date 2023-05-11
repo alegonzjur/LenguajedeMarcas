@@ -1,0 +1,7 @@
+/*1*/
+CREATE OR REPLACE
+PROCEDURE FINANZAS (numero NUMBER, minimo NUMBER, maximo NUMBER, medio NUMBER) IS 
+begin
+  SELECT numde FROM EMPLEADOS
+  WHERE nomde = 'FINANZAS'
+end;
