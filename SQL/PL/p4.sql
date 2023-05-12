@@ -35,11 +35,11 @@ CREATE OR REPLACE
 FUNCTION NOTA (nota NUMBER) RETURN VARCHAR2 IS
 BEGIN
   CASE
-    when nota>=9 then DBMS_OUTPUT.PUT_LINE('Sobresaliente');
-    when nota BETWEEN 7 AND 8 DBMS_OUTPUT.PUT_LINE('Notable');
-    when nota=6 then DBMS_OUTPUT.PUT_LINE('Bien');
-    when nota=5 then DBMS_OUTPUT.PUT_LINE('Suficiente');
-    when nota<5 then DBMS_OUTPUT.PUT_LINE('Insuficiente');
+    when nota>=9 then RETURN 'Sobresaliente';
+    when nota BETWEEN 7 AND 8 RETURN 'Notable';
+    when nota=6 then RETURN 'Bien';
+    when nota=5 then RETURN 'Suficiente';
+    when nota<5 then RETURN 'Insuficiente';
   END CASE;
 END;
 /  
