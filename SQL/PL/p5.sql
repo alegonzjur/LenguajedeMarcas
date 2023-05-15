@@ -13,7 +13,7 @@ end;
 CREATE OR REPLACE 
 PROCEDURE AUMENTO IS
 DECLARE 
-  CURSOR Transaccion IS
+  CURSOR C IS
     SELECT numem,nomem,salar INTO codigo,nombre,salinicial FROM EMPLEADOS WHERE numhi>2 AND salar<2000;
   salfinal NUMBER;
 BEGIN
