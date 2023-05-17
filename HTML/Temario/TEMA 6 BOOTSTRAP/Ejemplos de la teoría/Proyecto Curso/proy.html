@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto</title>
+    <!--Bootstrap y CSS-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!--Header-->
+        <!--Fila con contenido centrado.-->
+        <div class="row justify-content-center">
+            <!--Columnas de 0-576(4)/768-992(3)/992-1200(2)-->
+            <div class="col-4 col-md-3 col-lg-2">
+                <!--Imagen fluida-->
+                <img src="img/logo.jpg" class = "img-fluid"alt="logo">
+            </div>
+        </div>
+        <!--Menú-->
+        <!--Fila-->
+        <div class="row">
+            <!--Dividimos la fila en 10 columnas-->
+            <div class="col-12">
+                <!--Division de nav(no explicado)-->
+                <nav class="navbar navbar-expand-md navbar-light bg-success text-white">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarText">
+                        <!--Lista desordenada/Margen derecho automático-->
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item active">
+                                <a class='nav-link' href="#">Inicio <span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link text-white">Menú Item 1</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link text-white">Menú Item 2</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link text-white">Menú Item 3</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link text-white">Menú Item 4</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link text-white">Menú Item 5</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <!--Imágenes y contenido-->
+        <!--Fila inicial/Margen superior-3-->
+        <div class="row mt-3">
+            <!--6 columnas para tamaño medio para el vídeo.-->
+            <div class="col-md-6">
+                <div class="embed-responsive embed-responsive-4by3">
+                    <iframe width="854" height="480" src="https://www.youtube.com/embed/9-SUmFFlhOY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                </div>
+            </div>
+            <!--6 columnas para tamaño medio para las imágenes-->
+            <div class="col-md-6">
+                <!--3 filas de altura con margen superior de 3-->
+                <div class="row mt-3">
+                    <!--Dividimos en 6 columnas extrapequeñas. Se repite cuatro veces-->
+                    <div class="col-6">
+                        <figure class="figure">
+                            <!--Imagen fluida con esquinas redondas.-->
+                            <img src="img/img1.jpg" class="img-fluid rounded">
+                            <!--Caption con texto centrado-->
+                            <figcaption class="figure-caption text-center">Fotografía realizada por @pekechis</figcaption>
+                        </figure>
+                    </div>
+                    <div class="col-6">
+                        <figure class="figure">
+                            
+                            <img src="img/img2.jpg" class="img-fluid rounded">
+                            
+                            <figcaption class="figure-caption text-center">Fotografía realizada por @pekechis</figcaption>
+                        </figure>
+                    </div>
+                
+                
+                    <div class="col-6">
+                        <figure class="figure">
+                            
+                            <img src="img/img3.jpg" class="img-fluid rounded">
+                           
+                            <figcaption class="figure-caption text-center">Fotografía realizada por @pekechis</figcaption>
+                        </figure>
+                    </div>
+                    <div class="col-6">
+                        <figure class="figure">
+                        
+                            <img src="img/img4.jpg" class="img-fluid rounded">
+                            
+                            <figcaption class="figure-caption text-center">Fotografía realizada por @pekechis</figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Seccion-->
+        <!--12 columnas para el borde verde-->
+    </div>
+</body>
+</html>
