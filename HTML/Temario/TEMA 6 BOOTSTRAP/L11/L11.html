@@ -5,79 +5,82 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Layout11 - Alejandro Román González</title>
-    <link rel="stylesheet" href="sty_L11.css">
+    <link rel="stylesheet" href="L11.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
 </head>
 <body>
     <div class="container">
-        <header>
+        <div class="row bg-bl text-white mt-5 p-3">
             <h1>C L U B W</h1>
-        </header>
-        <main>
-            <nav>
-                <h1>This year, give a gift everyone else will love.</h1>
-                <h2>(Hint: It's Wine.)</h2>
-            </nav>
-            <div>
-                <img src="img/img1.jpg" alt="img1">
-                <p>Club W makes it delightfully easy to give great wine as a corporate gift. Simply provide an address, amount and write a gift note.
+        </div>
+        <div class="row mt-2 bg-bs">
+            <div class="col-12 text-center">
+                <h1 class="mt-5">This year, give a gift everyone else will love.</h1>
+                <h2 class="lt">(Hint: It's Wine.)</h2>
+            </div>
+            <!--Los unícos elementos que cambian de disposición de forma responsiva aquí son la fotos, el texto y el formulario.-->
+            <div class="col-lg-7 col-sm-12 col-md-12 mt-4">
+                <img src="img/img1.jpg" alt="img1" class="img-fluid">
+                <p class="text-justify mt-4 md-mt-3">Club W makes it delightfully easy to give great wine as a corporate gift. Simply provide an address, amount and write a gift note.
                     Your recipients will receive a beautiful gift presentation by mail. Each recipient can customize their Club W Experience with personal
                     recommendations, individual selections and the ability to choose when and where to have their wine delivered.
                 </p>
             </div>
-            <section>
-                <form>
-                    <h3>Send us your info!</h3>
-                    <article>
+            <!--Formulario-->
+            <div class="col-lg-4 col-sm-10 col-md-10 ml-4 bg-wh mb-4 justify-content-center">
+                <div class="form-group">
+                    <form>
+                        <h3 class="text-center mt-3">Send us your info!</h3>
                         <label for="FN">First Name</label>
-                        <input type="text" placeholder="First Name">
-                    </article>
-                    <article>
+                        <input type="text" placeholder="First Name" class="form-control">
                         <label for="LN">Last Name</label>
-                        <input type="text" placeholder="Last Name">
-                    </article>
-                    <article>
+                        <input type="text" placeholder="Last Name" class="form-control">
                         <label for="C">Company</label>
-                        <input type="text" placeholder="Company">
-                    </article>
-                    <article>
+                        <input type="text" placeholder="Company" class="form-control">
                         <label for="E">Email</label>
-                        <input type="text" placeholder="Email">
-                    </article>
-                    <article>
+                        <input type="text" placeholder="Email" class="form-control">
                         <label for="PN">Phone Number</label>
-                        <input type="text" placeholder="Phone Number">
-                    </article>
-                    <article>
+                        <input type="text" placeholder="Phone Number" class="form-control">
                         <label for="Amount">Amount</label>
-                        <select name="amount" id="am">
+                        <select name="amount" id="am" class="form-control">
                             <option value="" disabled selected value>Select amount...</option>
                             <option value="XS">X-Small</option>
                             <option value="S">Small</option>
                             <option value="M">Medium</option>
                             <option value="L">Large</option>
                         </select>
-                    </article>
-                    <label for="AI" id="AI">Additional information</label>
-                    <fieldset></fieldset>
-                    <button type="submit">Submit</button>
-                </form>
-            </section>
-        </main>
-        <footer>
-            <figure>
-                <img src="img/r1-rec.png">
-                <p>Club W is one of the ultimate one-size-fits-all solution to giving corporate gifts and people absolutely love it.</p>
-            </figure>
-            <figure>
-                <img src="img/r2-rec.png">
-                <p>Club W makes holiday gift giving so easy and their customer service and attention to detail is second by none.</p>
-            </figure>
-            <figure>
-                <img src="img/r3-rec.png">
-                <p>Months later people are still receiving wine shipments and thanking me for their Club W gifts.</p>
-            </figure>
-        </footer>
+                        <label for="AI" id="AI">Additional information</label>
+                        <textarea class="form-control"></textarea>
+                        <div class="text-center mt-3">
+                            <button type="submit" class="btn rounded text-white bg-pk">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-4 mb-4">
+            <div class="col-lg-4 col-sm-10 mt-sm-3 col-md-8">
+                <div class="figure">
+                    <img src="img/r1-rec.png" class="img-fluid rounded w-75">
+                    <figcaption class="figure-caption text-center mt-2">Club W is one of the ultimate one-size-fits-all solution to giving corporate gifts and people absolutely love it.</figcaption>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-10 mt-sm-3 col-md-8">
+                <div class="figure">
+                    <img src="img/r2-rec.png" class="img-fluid rounded w-75">
+                    <figcaption class="figure-caption text-center mt-2">Club W makes holiday gift giving so easy and their customer service and attention to detail is second by none.</figcaption>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-10 mt-sm-3 col-md-8">
+                <img src="img/r3-rec.png" class="img-fluid rounded w-75">
+                <figcaption class="figure-caption text-center mt-2">Months later people are still receiving wine shipments and thanking me for their Club W gifts.</figcaption>
+            </div>
+        </div>
     </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
 </body>
 </html>

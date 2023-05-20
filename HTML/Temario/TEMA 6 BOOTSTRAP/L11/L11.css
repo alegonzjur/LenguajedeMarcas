@@ -1,0 +1,27 @@
+/*Espcificaciones de Bootstrap*/
+
+/*Background negro del titulo*/
+.bg-bl{
+    background-color: black;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+/*Background de la parte del medio*/
+.bg-bs{
+    background-color: rgb(228, 228, 207);
+}
+
+/*Tamaño de la letra del medio*/
+.lt{
+    font-size: 1.25em;
+}
+
+/*Background del formulario*/
+.bg-wh{
+    background-color: rgb(242, 242, 242);
+}
+
+/*Background del colo*/
+.bg-pk{
+    background-color: rgb(201, 45, 178);
+    width: 100%;
+}
