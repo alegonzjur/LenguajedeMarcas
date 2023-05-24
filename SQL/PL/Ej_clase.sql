@@ -128,3 +128,145 @@ BEGIN
     RETURN num_libros;
 END ;
 /*Ejercicio 10*/
+/*Cursor explícito*/
+CREATE OR REPLACE
+PROCEDURE total_pedidos IS 
+  CURSOR ped IS
+    SELECT * FROM Pedidos;
+BEGIN 
+  FOR pedido IN ped
+  DBMS_OUTPUT.PUT_LINE('El número de pedidos hecho hasta ahora es de' || COUNT(ped));
+END total_pedidos;
+/*Cursor implícito*/
+CREATE OR REPLACE 
+PROCEDURE total_pedidos_2 AS 
+total NUMBER;
+BEGIN 
+  SELECT id_pedido INTO total FROM Pedidos;
+  DBMS_OUTPUT.PUT_LINE('El número de pedidos hasta ahora es de' || COUNT(total));
+END total_pedidos_2;
+
+/*Ejercicio 11*/
+
+CREATE OR REPLACE
+PACKAGE precios IS 
+  FUNCTION saber_precio (id_libro) RETURN precio_libro NUMBER;
+END precios;
+
+CREATE OR REPLACE 
+PACKAGE BODY precios IS 
+  FUNCTION saber_precio (p_id_libro) RETURN precio_libro NUMBER IS 
+  BEGIN 
+    select precio
+      into precio_libro
+      from Libros
+     where id_libro = p_id_libro;
+     RETURN precio_libro;
+     exception
+       when no_data_found then
+         RETURN NULL;
+  END saber_precio;
+END precios;
+
+/*Ejercicio 12*/
+CREATE OR REPLACE 
+PACKAGE pedidos IS 
+  PROCEDURE insertar_pedido (id_cliente NUMBER, id_libro NUMBER);
+END pedidos;
+
+CREATE OR REPLACE 
+PACKAGE BODY pedidos IS 
+  PROCEDURE insertar_pedido (p_id_cliente NUMBER, p_id_libro NUMBER) IS
+  BEGIN
+      insert into Pedidos (id_cliente,id_libros)
+      values (p_id_cliente,p_id_libro)
+      COMMIT;
+  END insertar_pedido;
+END pedidos;
+
+
+/*Ejercicio 13*/
+CREATE OR REPLACE 
+PACKAGE pedidos IS 
+  PROCEDURE pedidos_cliente (p_id_cliente NUMBER);
+END pedidos;
+
+CREATE OR REPLACE 
+PACKAGE BODY pedidos IS 
+  PROCEDURE pedidos_cliente (p_id_cliente) IS
+  CURSOR c_cli_ped IS 
+    SELECT id_libro 
+    FROM Pedidos
+    WHERE P.id_cliente = p_id_cliente;
+  BEGIN 
+    FOR registro IN c_cli_ped loop
+      DBMS_OUTPUT.PUT_LINE('Id del libro:' || id_libro);
+      EXIT WHEN c_cli_ped%NOTFOUND;
+    end loop
+  END pedidos_cliente;
+END pedidos; 
+
+/*Ejercicio 14*/
+CREATE OR REPLACE 
+PACKAGE pedidos_libros IS
+    FUNCTION calcular_total_pedido(pedido_id NUMBER) RETURN NUMBER;
+    PROCEDURE actualizar_pedido(pedido_id NUMBER, cantidad NUMBER);
+END pedidos_libros;
+
+CREATE OR REPLACE 
+PACKAGE BODY pedidos_libros IS 
+  FUNCTION calcular_total_pedido(pedido_id NUMBER) RETURN NUMBER IS
+  total NUMBER(7,2);
+  BEGIN 
+    select sum(libros.precio*pedidos_cantidad)
+      into total
+      from libros, pedidos
+     where pedidos.id_libro = libros.id_libro AND pedido.id_pedido = pedido_id;
+     RETURN total;
+  END calcular_total_pedido;
+  PROCEDURE actualizar_pedido(pedido_id NUMBER, cantidad NUMBER) IS
+  BEGIN 
+    UPDATE pedidos SET cantidad = cantidad WHERE id_pedido = pedido_id;
+  END actualizar_pedido;
+END pedidos_libros;
+/
+
+/*Ejercicio 15*/
+CREATE OR REPLACE 
+PACKAGE paq_func IS 
+  function dif_libros return total_libros NUMBER;
+  procedure ped_realizados;
+END paqu_func;
+
+CREATE OR REPLACE
+PACKAGE BODY paq_func IS
+  /*Primera función*/
+  function dif_libros return total_libros NUMBER IS 
+  BEGIN 
+  SELECT COUNT(DISTINCT(id_libro)) INTO total_libros FROM Pedidos;
+  RETURN total_libros;
+  END dif_libros;
+  /*Primer procedimiento*/
+  procedure ped_realizados IS
+  ped_real VARCHAR2; 
+  begin
+    select id_pedido
+      into ped_real
+      from Pedidos;
+    DBMS_OUTPUT.PUT_LINE(ped_real);
+  end ped_realizados;
+end paq_func;
+
+
+/*Ejercicio 16*/
+CREATE OR REPLACE 
+package general IS 
+    FUNCTION calcular_total_pedido(pedido_id NUMBER) RETURN NUMBER;
+    PROCEDURE actualizar_pedido(pedido_id NUMBER, cantidad NUMBER);
+    function dif_libros return NUMBER;
+    procedure ped_realizados;
+end general;
+
+CREATE OR REPLACE 
+package body general IS
+  
