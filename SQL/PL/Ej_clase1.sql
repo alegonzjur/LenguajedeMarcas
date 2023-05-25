@@ -66,3 +66,53 @@ BEGIN
 END 10_primeros_1;
 
 /*Ejercicio 6*/
+CREATE OR REPLACE
+PROCEDURE titulo (p_id_cliente) IS
+    CURSOR c_tit IS 
+    SELECT titulo
+    FROM Pedidos P JOIN Libros L ON P.id_libro = L.id_libro   
+    WHERE p_id_cliente = id_cliente;
+BEGIN 
+    FOR Pedido IN c_tit loop
+      DBMS_OUTPUT.PUT_LINE(pedido.titulo);
+    end loop
+END titulo;
+
+/*Ejercicio 7*/
+CREATE OR REPLACE 
+PROCEDURE obtener_precio IS 
+p_libro NUMBER;
+p_id_libro NUMBER := 'N023'
+BEGIN 
+    SELECT precio INTO p_libro FROM Libros WHERE id_libro = p_id_libro;
+    DBMS_OUTPUT.PUT_LINE(p_libro);
+    exception
+      when no_data_found then
+        DBMS_OUTPUT.PUT_LINE('El libro no existe');
+END obtener_precio;
+
+/*Ejercicio 8*/
+CREATE OR REPLACE 
+PROCEDURE insertar_correo (p_correo) IS 
+c_correo VARCHAR2; 
+BEGIN 
+    SELECT COUNT(id_cliente) INTO c_correo FROM Clientes WHERE p_correo = correo;
+    exception
+    IF c_correo%NOTFOUND THEN
+        insert into Clientes (correo)
+        values (p_correo);
+    END IF;
+END insertar_correo;
+
+
+/*Ejercicio 9*/
+CREATE OR REPLACE 
+FUNCTION total_libros_dif RETURN cont_libros NUMBER;
+IS 
+BEGIN 
+    SELECT COUNT(DISTINCT id_libro) INTO cont_libros FROM Pedidos;
+    RETURN (cont_libros);
+END total_libros_dif;
+
+/*Ejercicio 10*/
+CREATE OR REPLACE 
