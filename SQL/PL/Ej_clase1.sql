@@ -31,7 +31,7 @@ ped_cliente VARCHAR2;
       from Pedidos
      where p_id_cliente = id_cliente;
 begin
-  IF ped_cliente IS NULL THEN
+  IF ped_cliente%NOTFOUND THEN
   DBMS_OUTPUT.PUT_LINE('No ha realizado pedidos.');
   ELSE THEN 
   DBMS_OUTPUT.PUT_LINE('El pedido es' || ped_cliente);
